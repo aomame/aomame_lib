@@ -1,0 +1,1 @@
+#plugin.tt_news.displaySingle.age_stdWrap.age = 0

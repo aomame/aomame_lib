@@ -1,0 +1,53 @@
+
+
+/* HEADER */
+.navbar-inner {
+  background-color: #801F1F;
+}
+
+.navbar {
+  box-shadow: 0 0 100px #801F1F;
+}
+
+
+
+/* FOOTER */
+footer {
+  background-color: #801F1F;
+  box-shadow: 0 0 100px #801F1F;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #aaaaaa;
+}
+
+.hidden-phone {
+    background-color: #801F1F;
+    background-image: none;
+}
+
+
+
+
+/* NAVIGATION */
+.secondlevel_nav .btn-primary {
+	background-image: -webkit-linear-gradient(top, #FF0D0D, #AC001C);
+	background-image: -moz-linear-gradient(center top , #FF0D0D, #AC001C);
+}
+
+.btn-primary {
+	background-color: #FFEDED;
+}
+
+
+/* CONTENT ELEMENTS */
+.hero-unit {
+	background-color: #FFEDED;
+}
+
+

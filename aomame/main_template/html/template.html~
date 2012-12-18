@@ -1,0 +1,33 @@
+<!--###DOCUMENT###-->
+<html>
+<head>
+</head>
+<body>
+	###FORCE_JAVASCRIPT###
+	<div id="page">
+		<header>
+			<nav id="firstlevel">###NAV_FIRSTLEVEL###</nav>
+			###NAV_SECONDLEVEL###
+		</header> 
+		<div id="head_content">
+			<div class="container">
+				###HEADER###
+			</div>
+		</div>
+		<div id="content" class="container">
+			###TEST###
+			###COL_1###
+			###COL_2###
+			###COL_3###
+		</div>
+		<footer>
+			<div class="container">
+				###FOOTER_LEFT###
+				###FOOTER_MIDDLE###
+				###FOOTER_RIGHT###
+				</div>
+		</footer>
+	</div>
+</body>
+</html>
+<!--###DOCUMENT###-->

@@ -1,0 +1,1 @@
+#config.yag.addjQuery = 0

@@ -1,0 +1,27 @@
+
+$("document").ready(function(){
+		
+		//force javascript
+		$('#page').show();
+		$('#force_javascript').hide();
+		
+		//tt_news
+		$('.news-list-subheader a ').text('» weiterlesen');
+		$('#news-single-backlink a').text('« zurück');
+		
+		
+		//single vie video
+		//################
+		$.each($('.news_single_nav'), function(){
+			if($(this).html() == ''){
+				$(this).html('&nbsp;');
+			}	
+		});
+
+		//author string set
+		$('#news-single-author').html(
+				$('#news-single-author')
+					.html()
+					.replace( "By: ", "Dieses Video wurde hinzugefügt von: " )
+		);		    
+});

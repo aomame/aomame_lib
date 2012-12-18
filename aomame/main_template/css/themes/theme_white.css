@@ -1,0 +1,96 @@
+
+html {
+	background-color: #EAEFF2;
+}
+
+body {
+	background-color: #ffffff;
+	color: #444444;
+}
+
+a {
+	color: #07A6F0;
+}
+
+.bg_dark {
+    background-color: ;
+}
+
+.header #firstlevel {
+	z-index: 3;
+}
+
+.content_background {
+	background-color: rgba(150, 150, 150, 0.3);
+	box-shadow: 0 0 20px -3px #333333;
+}
+
+div#head_content {
+	background-color: #EAEFF2;
+	box-shadow: 0 0 100px #333333;
+	color: #FFFFFF;
+} 
+
+.aomame_face {
+	background-repeat: no-repeat;
+	background-image: url("../../img/aomame_face.png");
+	background-position: 0 0;
+}
+
+footer {
+	background-color: #EAEFF2;
+	box-shadow: 0 100px 100px 100px #555555;
+	border-top: 1px solid #E4E4E4;
+	color: #666666;
+}
+
+#theme_select {
+	background-color: #B4B4B4;
+	border: 1px solid #ffffff;
+}
+
+#theme_inner_menu {
+	background-color: #474747;
+	border: 1px solid #ffffff;
+}
+
+#logo {
+	z-index: 4;
+}
+
+.headconwrap h1 {
+	color: #727272;
+}
+
+.headconwrap p {
+	color: #FFFFFF;
+}
+
+
+
+/* MENU */
+.header #firstlevel li a {
+	color: #ffffff;
+}
+
+#secondlevel {
+	z-index: 3;
+}
+
+
+/* TABLES  */
+
+.contenttable .even td {
+	background-color: #D6D6D6;
+}
+
+.contenttable td {
+	padding: 0 10px;
+}
+
+
+/* FOOTER */
+
+.foo {
+	border-right: 1px solid #D6D6D6;
+}

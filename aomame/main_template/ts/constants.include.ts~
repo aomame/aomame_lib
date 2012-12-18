@@ -1,0 +1,15 @@
+#############################
+#														#
+#  Includes all TS Files    #
+#														#
+#############################
+
+## PAGE TS
+
+
+## EXT TS
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/main_template/ts/ext/constants.perfectlightbox.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/main_template/ts/ext/constants.yag.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/main_template/ts/ext/constants.formhandler.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/main_template/ts/ext/constants.fe_user_register.ts">
+
