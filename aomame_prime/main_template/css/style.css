@@ -1,0 +1,39 @@
+
+
+/***********/
+/* GENERAL */
+
+b {font-weight: bold;}
+.align-center {text-align: center;}
+.clear {clear: both;}
+
+
+body {
+	background: url("../img/bg/bg_01.gif") repeat scroll 0 0 #E8E8E8;
+}
+
+body > .container {
+    box-shadow: 0 0 4px rgba(50, 50, 50, 0.75);
+}
+
+.container {
+	background-color: #F9F9F9;
+}
+
+section {
+	background-color: #F9F9F9;
+	padding: 0 40px;
+}
+
+
+.container hr {
+    background: url("../img/hr.gif") repeat-x scroll 0 0 transparent;
+    border: medium none;
+    height: 5px;
+    margin: 25px 40px 50px;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-weight: normal !important;
+}
