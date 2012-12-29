@@ -6,21 +6,28 @@ aomame {
 	
 	# PATH MANAGEMENT
 	path {
-		# cat=Aomame: Path/path/01; type=string; label= Path to maintemplate
+		global {
+						bootstrap {
+										css = typo3conf/ext/aomame/template/00_global_source/bootstrap/css/
+										js = typo3conf/ext/aomame/template/00_global_source/bootstrap/js/
+										img = typo3conf/ext/aomame/template/00_global_source/bootstrap/img/
+						}
+						ext {
+										css = typo3conf/ext/aomame/template/00_global_source/ext/css/
+										html = typo3conf/ext/aomame/template/00_global_source/ext/html/
+										img = typo3conf/ext/aomame/template/00_global_source/ext/img/
+										js = typo3conf/ext/aomame/template/00_global_source/ext/js/
+						}
+						css = typo3conf/ext/aomame/template/00_global_source/css/
+						js = typo3conf/ext/aomame/template/00_global_source/js/
+						img = typo3conf/ext/aomame/template/00_global_source/img/
+		}
 		maintemplate = typo3conf/ext/aomame/template/aomame/main_template/
-		# cat=Aomame: Path/path/02; type=string; label= Path to extension template folder
 		exttemplate = typo3conf/ext/aomame/template/aomame/ext_template/
-		# cat=Aomame: Path/path/03; type=string; label= Path to TS files
 		ts = typo3conf/ext/aomame/template/aomame/main_template/ts/
-		# cat=Aomame: Path/path/04; type=string; label= Path to HTML files
 		html = typo3conf/ext/aomame/template/aomame/main_template/html/
-		# cat=Aomame: Path/path/05; type=string; label= Path to CSS files
 		css = typo3conf/ext/aomame/template/aomame/main_template/css/
-		# cat=Aomame: Path/path/06; type=string; label= Path to Bootstrap files
-		bootstrap = typo3conf/ext/aomame/template/aomame/main_template/bootstrap/
-		# cat=Aomame: Path/path/07; type=string; label= Path to JavaScript files
 		js = typo3conf/ext/aomame/template/aomame/main_template/js/
-		# cat=Aomame: Path/path/08; type=string; label= Path to image folder
 		image = typo3conf/ext/aomame/template/aomame/main_template/img/
 	}
 	
@@ -30,36 +37,19 @@ aomame {
 	# PAGE BUILDER #
 	#################
 	page {
-		# SETTINGS
-		style {
-			body_bg_color =
-			
-			#center | left | right
-			page_align = center  
-			background_image =    
-			
-			# x | y | xy
-			background_repete =   
-			page_width =
-			page_height =
-			body_margin = 0,0,0,0
-			body_padding = 0,0,0,0
-			font =
-		}
-		
-		# HEAD
+		# HEADER UNIT
 		header {
 			# cat=Aomame: Page Structure/structure/01; type=boolean; label= Add the header
 			use_header = 1
 			
 			#pid of home page
-			homelink = 1
+			homelink = 23
 			
 			#logo filename
 			logo_filename = aomame.png
 			
-			# PID of SysFolder where the header content is stored
-			pid = 85
+			# PID of SysFolder where the default header content is stored
+			pid = 26
 			
 			# banner image url
 			banner_logo =  
@@ -125,7 +115,7 @@ aomame {
 		title = Aomame
 		
 		# cat=Aomame: Basic Settings/basic/01; type=string; label= Base URL
-		baseURL =
+		baseURL = http://localhost/workspace/t3_v47/
 		
 		# cat=Aomame: Basic Settings/basic/02; type=string; label= Charset
 		charset = utf-8

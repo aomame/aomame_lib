@@ -8,7 +8,7 @@ lib.force_javascript {
 config {
 	doctype = <!DOCTYPE html>
 	simulateStaticDocuments = 0
-	baseURL = http://www.aomame.ch/
+	baseURL = {$aomame.head.baseURL}
 	tx_realurl_enable = 1
 	prefixLocalAnchors = all
 	language = de
