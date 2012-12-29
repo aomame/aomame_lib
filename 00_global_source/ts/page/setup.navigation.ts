@@ -1,0 +1,453 @@
+################################
+###   SET  FIRSTLEVEL MENU   ###
+###--------------------------###
+lib.nav_firstlevel = HMENU
+lib.nav_firstlevel.1 = TMENU
+lib.nav_firstlevel.1 {
+  NO = 1
+  NO {
+    linkWrap = <li class="firstlevel_menu_label">|</li>
+    stdWrap.htmlSpecialChars = 1
+  }
+  CUR = 1
+  CUR {
+    linkWrap = <li class="menu_current">|</li>
+    stdWrap.htmlSpecialChars = 1
+  }
+  ACT = 1
+  ACT {
+    linkWrap = <li class="active">|</li>
+    stdWrap.htmlSpecialChars = 1
+  }
+}
+lib.nav_firstlevel.wrap = <div class="container nav-collapse"><ul class="nav">|</ul></div>
+
+
+################################
+###   SET  SECONDLEVEL MENU  ###
+###--------------------------###
+
+lib.nav_secondlevel = HMENU
+lib.nav_secondlevel {
+	if.isTrue = {$aomame.page.nav.secondlevel.use_secondlevel_nav}
+	entryLevel = {$aomame.page.nav.secondlevel.enrty_level}
+	
+	  1 = TMENU
+	  1 {
+	    #expAll =1
+	    wrap = <ul class="subnavi">|</ul>
+	    noBlur = 1
+	    expAll = 0
+	    target = self
+	      
+	    NO = 1
+	    NO {
+	      ATagParams = class="btn btn-secondary btn-large"
+	      wrapItemAndSub = <li class="secondlevel_no">|</li>
+	      #stdWrap.htmlSpecialChars = 1
+	      
+	      1 = COA
+	      1 {
+		10 = TEXT
+		10 {
+		  field = title
+		  listNum = 0
+		  listNum.splitChar = |
+		}
+		20 < .10
+		20{
+		  listNum = 1
+		  wrap = <br />|
+		  required = 1
+		}
+	      }
+	      stdWrap.field >
+	      stdWrap.cOnject = COA
+	      stdWrap.cObject < .1
+	    }
+	    
+	    CUR <.NO
+	    CUR {
+		wrapItemAndSub = <li class="secondlevel_cur">|</li>
+		ATagParams = class="btn btn-primary btn-large"
+	    }
+	    
+	    ACT <.NO
+	    ACT {
+	       wrapItemAndSub = <li class="secondlevel_act">|</li>
+		ATagParams = class="btn btn-secondary btn-large"
+	    }
+	  }
+
+
+	
+	  2 < .1
+	  2 {
+		wrap = <ul class="navlevel_3">|</ul>
+		
+		NO.wrapItemAndSub = <li class="thrirdlevel_no menu_label">|</li>
+		NO.ATagParams = class="btn btn-secondary btn-small"
+		NO.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		NO.wrapItemAndSub.insertData=1
+		
+		CUR.wrapItemAndSub = <li class="thrirdlevel_cur menu_label">|</li>
+		CUR.ATagParams = class="btn btn-primary btn-small"
+		CUR.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		CUR.wrapItemAndSub.insertData=1
+		
+		ACT.wrapItemAndSub = <li class="thrirdlevel_act menu_label">|</li>
+    		ACT.ATagParams = class="btn btn-secondary btn-small"
+		ACT.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		ACT.wrapItemAndSub.insertData=1
+		
+    		# NO + Uebersetzung nicht vorhanden
+		USERDEF1 < .NO
+		# ACT + Uebersetzung nicht vorhanden
+		USERDEF2 < .ACT
+  	}
+	
+	3 < .1
+	3 {
+		wrap = <ul class="navlevel_4">|</ul>
+		
+		NO.wrapItemAndSub = <li class="fourthlevel_no menu_label">|</li>
+		NO.ATagParams = class="btn btn-secondary btn-small"
+		NO.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		NO.wrapItemAndSub.insertData=1
+		
+		CUR.wrapItemAndSub = <li class="fourthlevel_cur menu_label">|</li>
+		CUR.ATagParams = class="btn btn-primary btn-small"
+		CUR.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		CUR.wrapItemAndSub.insertData=1
+		
+		ACT.wrapItemAndSub = <li class="fourthlevel_act menu_label">|</li>
+    		ACT.ATagParams = class="btn btn-secondary btn-small"
+		ACT.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		ACT.wrapItemAndSub.insertData=1
+		
+    		# NO + Uebersetzung nicht vorhanden
+		USERDEF1 < .NO
+		# ACT + Uebersetzung nicht vorhanden
+		USERDEF2 < .ACT
+  	}
+
+
+	4 < .1
+	4 {
+		wrap = <ul class="navlevel_5">|</ul>
+		
+		NO.wrapItemAndSub = <li class="fifthlevel_no menu_label">|</li>
+		NO.ATagParams = class="btn btn-secondary btn-small"
+		NO.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		NO.wrapItemAndSub.insertData=1
+		
+		CUR.wrapItemAndSub = <li class="fifthlevel_cur menu_label">|</li>
+		CUR.ATagParams = class="btn btn-primary btn-small"
+		CUR.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		CUR.wrapItemAndSub.insertData=1
+		
+		ACT.wrapItemAndSub = <li class="fifthlevel_act menu_label">|</li>
+    		ACT.ATagParams = class="btn btn-secondary btn-small"
+		ACT.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		ACT.wrapItemAndSub.insertData=1
+		
+    		# NO + Uebersetzung nicht vorhanden
+		USERDEF1 < .NO
+		# ACT + Uebersetzung nicht vorhanden
+		USERDEF2 < .ACT
+  	}
+
+
+}
+
+
+
+
+#############################
+###   SET  COLLAPSE MENU  ###
+###-----------------------###
+
+lib.nav_collapse = HMENU
+lib.nav_collapse {
+	if.isTrue = {$aomame.page.nav.collapse.use_secondlevel_nav}
+	entryLevel = {$aomame.page.nav.collapse.enrty_level}
+	
+	  1 = TMENU
+	  1 {
+	    #expAll =1
+	    wrap = <ul id="subnavi">|</ul>
+	    noBlur = 1
+	    expAll = 0
+	    target = _top
+	      
+	    NO = 1
+	    NO {
+	      ATagParams = class="btn btn-secondary btn-large"
+	      wrapItemAndSub = <li class="secondlevel_no">|</li>
+	      #stdWrap.htmlSpecialChars = 1
+	      
+	      1 = COA
+	      1 {
+		10 = TEXT
+		10 {
+		  field = title
+		  listNum = 0
+		  listNum.splitChar = |
+		}
+		20 < .10
+		20{
+		  listNum = 1
+		  wrap = <br />|
+		  required = 1
+		}
+	      }
+	      stdWrap.field >
+	      stdWrap.cOnject = COA
+	      stdWrap.cObject < .1
+	    }
+	    
+	    CUR <.NO
+	    CUR {
+		wrapItemAndSub = <li class="secondlevel_cur">|</li>
+		ATagParams = class="btn btn-primary btn-large"
+	    }
+	    
+	    ACT <.NO
+	    ACT {
+	       wrapItemAndSub = <li class="secondlevel_act">|</li>
+		ATagParams = class="btn btn-secondary btn-large"
+	    }
+	  }
+
+
+	
+	  2 < .1
+	  2 {
+		wrap = <ul id="nav2">|</ul>
+		
+		NO.wrapItemAndSub = <li class="thrirdlevel_no menu_label">|</li>
+		NO.ATagParams = class="btn btn-secondary btn-small"
+		NO.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		NO.wrapItemAndSub.insertData=1
+		
+		CUR.wrapItemAndSub = <li class="thrirdlevel_cur menu_label">|</li>
+		CUR.ATagParams = class="btn btn-primary btn-small"
+		CUR.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		CUR.wrapItemAndSub.insertData=1
+		
+		ACT.wrapItemAndSub = <li class="thrirdlevel_act menu_label">|</li>
+    		ACT.ATagParams = class="btn btn-secondary btn-small"
+		ACT.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		ACT.wrapItemAndSub.insertData=1
+		
+    		# NO + Uebersetzung nicht vorhanden
+		USERDEF1 < .NO
+		# ACT + Uebersetzung nicht vorhanden
+		USERDEF2 < .ACT
+  	}
+}
+
+
+
+
+
+########################################
+###   MOBILE_SECONDLEVEL_NAVIGATION  ###
+###----------------------------------###
+lib.mobile_nav_secondlevel = HMENU
+lib.mobile_nav_secondlevel {
+	if.isTrue = {$aomame.page.nav.secondlevel.use_secondlevel_nav}
+	entryLevel = {$aomame.page.nav.secondlevel.enrty_level}
+
+
+
+
+	  1 = TMENU
+	  1 {
+	    #expAll =1
+	    wrap = <ul class="subnavi">|</ul>
+	    noBlur = 1
+	    expAll = 0
+	    target = _top
+	      
+	    NO = 1
+	    NO {
+	      ATagParams = class="btn btn-secondary btn-large"
+	      wrapItemAndSub = <li class="secondlevel_no">|</li>
+	      #stdWrap.htmlSpecialChars = 1
+	      
+	      1 = COA
+	      1 {
+		10 = TEXT
+		10 {
+		  field = title
+		  listNum = 0
+		  listNum.splitChar = |
+		}
+		20 < .10
+		20{
+		  listNum = 1
+		  wrap = <br />|
+		  required = 1
+		}
+	      }
+	      stdWrap.field >
+	      stdWrap.cOnject = COA
+	      stdWrap.cObject < .1
+	    }
+	    
+	    CUR <.NO
+	    CUR {
+		wrapItemAndSub = <li class="secondlevel_cur">|</li>
+		ATagParams = class="btn btn-primary btn-large"
+	    }
+	    
+	    ACT <.NO
+	    ACT {
+	       wrapItemAndSub = <li class="secondlevel_act">|</li>
+		ATagParams = class="btn btn-secondary btn-large"
+	    }
+	  }
+
+	  2 < .1
+	  2 {
+		wrap = <ul class="navlevel_2">|</ul>
+		
+		NO.wrapItemAndSub = <li class="thrirdlevel_no menu_label">|</li>
+		NO.ATagParams = class="btn btn-secondary btn-small"
+		NO.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		NO.wrapItemAndSub.insertData=1
+		
+		CUR.wrapItemAndSub = <li class="thrirdlevel_cur menu_label">|</li>
+		CUR.ATagParams = class="btn btn-primary btn-small"
+		CUR.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		CUR.wrapItemAndSub.insertData=1
+		
+		ACT.wrapItemAndSub = <li class="thrirdlevel_act menu_label">|</li>
+    		ACT.ATagParams = class="btn btn-secondary btn-small"
+		ACT.stdWrap.innerWrap(
+  			<span>|</span>
+		)
+		ACT.wrapItemAndSub.insertData=1
+		
+    		# NO + Uebersetzung nicht vorhanden
+		USERDEF1 < .NO
+		# ACT + Uebersetzung nicht vorhanden
+		USERDEF2 < .ACT
+  	}
+
+	stdWrap.dataWrap = <div class="btn-group visible-phone mobile_secondlevel_nav"><a data-toggle="dropdown" class="btn btn-large dropdown-toggle">{page : title}<span class="caret"></span></a><ul class="dropdown-menu"> | </ul></div>
+
+}
+
+
+#################################
+###   BOOTSTRAP NAV COLLAPSE  ###
+###---------------------------###
+
+lib.nav_collapse = COA
+lib.nav_collapse {
+	10 = TEXT
+	10.value = <span class="icon-bar"></span>
+	20 = TEXT
+	20.value = <span class="icon-bar"></span>
+	30 = TEXT
+	30.value = <span class="icon-bar"></span>
+	
+	wrap = <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">|</a>
+}
+
+
+
+#########################
+###   Superfish Nav   ###
+###-------------------###
+lib.superfish_nav = HMENU
+lib.superfish_nav {
+	1 = TMENU
+	1 {
+		expAll =1
+		wrap = <nav class="{$aomame.page.layout.bootstrap.class.direction} superfish"><ul class="sf-menu">|</ul></nav>
+		noBlur = 1
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+			stdWrap.htmlSpecialChars = 1
+			ATagTitle.field = title
+		}
+		ACT <.NO
+		ACT.wrapItemAndSub = <li class="active">|</li>
+		
+		CUR <.NO
+		CUR.wrapItemAndSub = <li class="current">|</li>
+	}
+ 
+	2 < .1
+	2.NO.wrapItemAndSub = <li class="first"> | </li> |*| <li> | </li> |*| <li class="last"> | </li>
+	2.ACT.wrapItemAndSub = <li class="active first"> | </li> |*| <li> | </li> |*| <li class="active last"> | </li>
+	2.CUR.wrapItemAndSub = <li class="current first"> | </li> |*| <li> | </li> |*| <li class="current last"> | </li>
+	2.wrap = <ul class="sf_2 sf_sub">|</ul>
+ 
+	3 < .2
+	3.wrap = <ul class="sf_3 sf_sub">|</ul>
+	
+}
+
+
+#######################################################################
+###  Bootstrap Nav. with Logo | Collapsed: Bootstrap Collapse Menu  ###
+###-----------------------------------------------------------------###
+lib.bootstrap_nav_with_logo = COA
+lib.bootstrap_nav_with_logo {
+	1 < lib.nav_collapse
+	2 < lib.logo
+	3 < lib.nav_firstlevel
+}
+[globalVar = LIT:1 = {$aomame.page.layout.bootstrap.class.navbar-fixed-top}]
+lib.bootstrap_nav_with_logo.wrap = <div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"> | </div></div></div>
+[else]
+lib.bootstrap_nav_with_logo.wrap = <div class="navbar"><div class="navbar-inner"><div class="container"> | </div></div></div>
+[global]
+
+
+###########################################################
+###   Superfish Nav. with Logo | Collapsed: Dropdown Nav.   ###
+###-----------------------------------------------------###
+lib.superfish_nav_with_logo = COA
+lib.superfish_nav_with_logo {
+	#1 < lib.nav_collapse_dropdown
+	2 < lib.logo
+	2.wrap = <div class="span4"> | </div>
+	3 < lib.superfish_nav
+	3.wrap = <div class="span8"> | </div>
+	wrap = <header><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></header>
+}
+
