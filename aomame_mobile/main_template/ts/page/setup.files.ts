@@ -34,28 +34,32 @@ page.110 {
 
 #page.110.print.file = 
 
+page {
+	headerData {
+	  	4 = TEXT
+	  	4.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.bootstrap.less}bootstrap.less" />
+		5 = TEXT
+		5.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.bootstrap.less}responsive.less" />
+		6 = TEXT
+		6.value = <script type="text/javascript" src="{$aomame.path.global.js}lib/less-{$aomame.head.less_version}.min.js"></script>
+	}
+
+	#JS Files
+	includeJS
+	includeJSFooter {
+	  jquery = {$aomame.path.global.js}lib/jquery-{$aomame.head.jquery_version}.min.js
+	  jquery.forceOnTop = 1
+	  cookie = {$aomame.path.global.js}lib/jquery.cookie.js
+	  bootstrap = {$aomame.path.global.bootstrap.js}bootstrap.js
+	  script = {$aomame.path.js}script.js
+	  footerfix = {$aomame.path.js}footerfix.js
+	  #analytics = {$aomame.path.js}analytics.js
+	}
 
 
-
-#JS Files
-#page.includeJS
-page.includeJSFooter {
-  jquery = {$aomame.path.global.js}lib/jquery-1.8.3.min.js
-  jquery.forceOnTop = 1
-  cookie = {$aomame.path.global.js}lib/jquery.cookie.js
-  bootstrap = {$aomame.path.global.bootstrap.js}bootstrap.js
-  script = {$aomame.path.js}script.js
-  footerfix = {$aomame.path.js}footerfix.js
-  #analytics = {$aomame.path.js}analytics.js
-}
-
-
-#CSS Files
-page.includeCSS {
-	bootstrap_navbar = {$aomame.path.global.bootstrap.css}navbar/navbar_1.css
-	bootstrap_navlist = {$aomame.path.global.bootstrap.css}navlist/navlist_1.css
-	bootstrap = {$aomame.path.global.bootstrap.css}bootstrap.css
-	theme_aomame_mobile = {$aomame.path.css}themes/aomamestyle.css
-	bootstrap_responsive = {$aomame.path.global.bootstrap.css}bootstrap-responsive.css
-	style = {$aomame.path.css}style.css
+	#CSS Files
+	includeCSS {
+		theme_aomame_mobile = {$aomame.path.css}themes/aomamestyle.css
+		style = {$aomame.path.css}style.css
+	}
 }

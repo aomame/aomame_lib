@@ -8,7 +8,7 @@ aomame {
 	path {
 		global {
 						bootstrap {
-										css = typo3conf/ext/aomame/template/00_global_source/bootstrap/css/
+										less = typo3conf/ext/aomame/template/00_global_source/bootstrap/less/
 										js = typo3conf/ext/aomame/template/00_global_source/bootstrap/js/
 										img = typo3conf/ext/aomame/template/00_global_source/bootstrap/img/
 						}
@@ -22,23 +22,14 @@ aomame {
 						js = typo3conf/ext/aomame/template/00_global_source/js/
 						img = typo3conf/ext/aomame/template/00_global_source/img/
 		}
-		# cat=Aomame: Path/path/01; type=string; label= Path to maintemplate
 		maintemplate = typo3conf/ext/aomame/template/aomame_mobile/main_template/
-		# cat=Aomame: Path/path/02; type=string; label= Path to extension template folder
 		exttemplate = typo3conf/ext/aomame/template/aomame_mobile/ext_template/
-		# cat=Aomame: Path/path/03; type=string; label= Path to TS files
 		ts = typo3conf/ext/aomame/template/aomame_mobile/main_template/ts/
-		# cat=Aomame: Path/path/04; type=string; label= Path to HTML files
 		html = typo3conf/ext/aomame/template/aomame_mobile/main_template/html/
-		# cat=Aomame: Path/path/05; type=string; label= Path to CSS files
 		css = typo3conf/ext/aomame/template/aomame_mobile/main_template/css/
-		# cat=Aomame: Path/path/07; type=string; label= Path to JavaScript files
 		js = typo3conf/ext/aomame/template/aomame_mobile/main_template/js/
-		# cat=Aomame: Path/path/08; type=string; label= Path to image folder
 		image = typo3conf/ext/aomame/template/aomame_mobile/main_template/img/
-		#images of bootstrap framework
 		bootstrap.img = typo3conf/ext/aomame/template/aomame_mobile/main_template/img/bootstrap/
-		
 	}
 	
 	
@@ -47,96 +38,67 @@ aomame {
 	# PAGE BUILDER #
 	#################
 	page {
-		# SETTINGS
-		style {
-			body_bg_color =
-			
-			#center | left | right
-			page_align = center  
-			background_image =    
-			
-			# x | y | xy
-			background_repete =   
-			page_width =
-			page_height =
-			body_margin = 0,0,0,0
-			body_padding = 0,0,0,0
-			font =
+		
+		header {
+				use_header = 0
+				
+				logo_filename = aomame.png
+				
+				homelink = 1
+				
+				pid = 85
+				
+				banner_logo =  
+				
+				slide = -1
 		}
 		
-	# HEAD
-	header {
-			# cat=Aomame: Page Structure/structure/01; type=boolean; label= Add the header
-			use_header = 0
-			
-			#logo filename
-			logo_filename = aomame.png
-			
-			#pid of home page/rootpage
-			homelink = 1
-			
-			# PID of SysFolder where the header content is stored
-			pid = 85
-			
-			# banner image url
-			banner_logo =  
-			
-			#rekursive vererben auf unterseiten
-			slide = -1
-	}
-		
-	###############
-	# NAVIGATION  #
-	###############
-	nav {
-			firstlevel {
-				# cat=Aomame: Page Structure/structure/02; type=boolean; label= Add main menu
-				use_main_nav = 1
-				
-				# horizontal | vertical
-				main_navigation = horizontal
-				
-				# only possible when "main_navigation = horizontal"
-				# text | collapsible
-				menu_type = text
-				
-				# number of visible nav levels
-				main_nav_level_depth = 3
-	}
-			
-	secondlevel {
-				# cat=Aomame: Page Structure/structure/03; type=boolean; label= Add secondlevel menu
-				use_secondlevel_nav = 1
-				
-				# horizontal | vertical
-				second_level_navigation = horizontal
-				
-				# show pages beginning from this level (first level is 0)
-				enrty_level = 1
-				
-				# show subpages until level (first level is 0)
-				out_level = 1
-	}
-			
-		collapse {
-				enrty_level = 0
-			}
-			
-			mobile {
-				secondlevel {
-					enrty_level = 2
+		###############
+		# NAVIGATION  #
+		###############
+		nav {
+				firstlevel {
+					use_main_nav = 1
+					
+					main_navigation = horizontal
+					
+					# only possible when "main_navigation = horizontal"
+					# text | collapsible
+					menu_type = text
+					
+					# number of visible nav levels
+					main_nav_level_depth = 3
 				}
-			}
+				
+				secondlevel {
+							use_secondlevel_nav = 1
+							
+							# horizontal | vertical
+							second_level_navigation = horizontal
+							
+							# show pages beginning from this level (first level is 0)
+							enrty_level = 1
+							
+							# show subpages until level (first level is 0)
+							out_level = 1
+				}
+			
+				collapse {
+						enrty_level = 0
+				}
+			
+				mobile {
+					secondlevel {
+						enrty_level = 2
+					}
+				}
 		}
-		
-		
-		# CONTENT
+
 		content {
 			# default count of column, if pagelayout not set
 			column = 2
 		}
 		
-		# FOOTER
 		footer {
 			# cat=Aomame: Page Structure/structure/04; type=boolean; label= Add footer
 			use_footer = 1
@@ -153,22 +115,17 @@ aomame {
 	# HEAD SETTINGS  #
 	##################
 	head {
-		# cat=Aomame: Basic Settings/basic/00; type=string; label= Website Title
 		title = Aomame Mobile
 		
-		# cat=Aomame: Basic Settings/basic/01; type=string; label= Base URL
-		#baseURL = http://mobile.aomame.ch/
 		baseURL = http://localhost/workspace/t3_v47/
 		
-		# cat=Aomame: Basic Settings/basic/02; type=string; label= Charset
 		charset = utf-8
 		
-		# cat=Aomame: Basic Settings/basic/03; type=boolean; label= Add jQuery JS Library
 		add_jquery = 1
-		# cat=Aomame: Basic Settings/basic/04; type=boolean; label= Add Prototype JS Library
-		add_prototype = 0
-		# cat=Aomame: Basic Settings/basic/05; type=boolean; label= Add Mootools JS Library
-		add_mootools = 0
+		
+		jquery_version = 1.8.3
+		
+		less_version = 1.3.1
 	}
 
 
