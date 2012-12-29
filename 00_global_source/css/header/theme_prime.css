@@ -1,0 +1,29 @@
+
+
+header, nav {
+    display: block;
+}
+
+header {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-top: 5px solid #CFCFCF;
+    border-bottom: 5px solid #CFCFCF;
+    padding-bottom: 30px;
+    padding-top: 45px;
+    position: relative;
+}
+
+nav {
+    font-size: 16px;
+    margin-top: 15px;	
+}
+
+
+nav > ul {
+    display: block;
+    margin-left: 0;
+}
+
+.brand {
+	padding-left: 30px;
+}
