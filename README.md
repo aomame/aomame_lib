@@ -82,20 +82,20 @@ Template/Konfiguration anpassen
 		Alle vorhandenen Elemente findet man im TYPO3 Backend unter Template->Object Browser -> Setup -> [lib]
 		Falls nicht vorhanden einfach ein neues globases oder lokales Objekt erstellen (und in "[path/to/files/][Projectname/]ts/include.setup.ts" bzw. "include.constants.ts" einbinden!) und zuweisen
 
-Gridelement Layouts erstellen:
+2. Gridelement Layouts erstellen:
 	- Im erstellten SysOrdner "Layouts" können weitere Gridelementlayouts erstellt (oder vorhandene geändert) werden.
 	- im TypoScript unter "[path/to/files/]00_global_source/ts/ext/setup.gridelement.ts" das neue Grid definieren.
 		Dazu der ID des neuen Gridelement mit  "< default" die Grundeinstellung von Gridelement zuweisen
 		Die einzelnen Columns anhand ihrer zugewiesenen ID definieren
 
 
-CSS anpassen:
+3. CSS anpassen:
 	Die Datei "[path/to/files/][projectname/]less/variable.less" und "custom.variable.less" öffnen.
 		Die definierten CSS Werte anpassen.
 		In "custom.variable.less" können weitere less Variablen hinzugefügt werden. Die hardcodierten Werte müssen natürlich in der betreffenden less Datei noch mit der neu erstellten Variable ersetzt werden 
 		Alle "nicht-less-files" sind normale CSS Files. "[path/to/files/][projectname/]css" für alle lokalen Stylesheets. Globale Styles sind unter "[path/to/files/]00_global_source/css" zu finden.
 		
-TypoScript Config anpasen:
+4. TypoScript Config anpasen:
 	Die Hauptkonfiguration der Webseite findet man unter "[path/to/files/][projectname/]ts/config/constants.aomame.ts" 
 	Hier alle Werte anpassen - Die bezeichnungen sind selbsterklärend und verständlich anhand ihres Pfades.
 		z.B.    aomame.page.header.active = 1  	--- bindet den Header auf der Webseite ein
