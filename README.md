@@ -28,9 +28,10 @@ Grundinstallation:
 	- Im TypoScript Template auf der Root Seite auf "Edit the whole template record" klicken und unter "Includes" das TypoScript "CSS Styled Content" einbinden.
 	- Im Register "General" im Feld Setup und Constants folgendes einfügen.
 		- Constants: 
-			<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/constants.include.ts">
+			\<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/constants.include.ts"\>
+		
 		- Setup: 
-			<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/setup.include.ts">
+			\<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/setup.include.ts"\>
 
 
 8. Jetzt müssen noch die Pfade der eingebundenen TypoScript Dateien angepasst werden, da im Moment noch die Dateien vom Projekt "aomame_prime" geladen werden.]
