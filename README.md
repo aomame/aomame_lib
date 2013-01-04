@@ -36,9 +36,9 @@ Grundinstallation:
 8. Jetzt müssen noch die Pfade der eingebundenen TypoScript Dateien angepasst werden, da im Moment noch die Dateien vom Projekt "aomame_prime" geladen werden.]
 	1. Ins Verzeichnis "fileadmin/template/[...Projektname...]/main_template/ts/ wechseln.
 	2. Die Datei "constants.include.ts" öffnen und alle Pfade anpassen
-		- z.B. von <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/config/constants.aomame.ts">
+		- z.B. von \<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/config/constants.aomame.ts"\>
 			in
-			   <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/config/constants.aomame.ts">
+			   \<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/template/[...Projektname...]/main_template/ts/config/constants.aomame.ts"\>
 
 	3. Dasselbe nun nochmals für die Datei "setup.include.ts" im selben Verzeichnis.
 	 
