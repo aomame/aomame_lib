@@ -18,6 +18,10 @@ $("document").ready(function(){
 	
 });
 
+
+
+
+
 function getURLParam(name){
     return decodeURI(
         (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]

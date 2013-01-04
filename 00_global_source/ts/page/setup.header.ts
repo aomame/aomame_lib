@@ -20,5 +20,12 @@ lib.header {
 		wrap = <div class="headconwrap">|</div>
 		slide = {$aomame.page.header.slide}
 	}
-	wrap = <div class="hero-unit head_content"> | </div>
+	
+	wrap = 
 }
+
+[globalVar = LIT:1 = {$aomame.page.header.use_bootstrap_header_unit}]
+lib.header.wrap = <div class="hero-unit head_content"> | </div>
+[else]
+lib.header.wrap = <div class="header head_content"> | </div>
+[global]

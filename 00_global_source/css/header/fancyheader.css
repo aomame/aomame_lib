@@ -1,0 +1,19 @@
+
+section.fancyheader {
+	border-bottom: 3px solid;
+	position: relative;
+}
+
+section.fancyheader .container {
+	display: none;
+}
+
+section.fancyheader .fh_tab {
+	width: 150px;
+	height: 45px;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+	margin-top: 3px;
+	right: 25%;
+}

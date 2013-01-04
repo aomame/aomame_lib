@@ -10,6 +10,7 @@ b {font-weight: bold;}
 
 body {
 	background: url("../img/bg/bg_01.gif") repeat scroll 0 0 #E8E8E8;
+	padding: 0 !important;
 }
 
 body > .container {
@@ -22,6 +23,9 @@ body > .container {
 
 section {
 	background-color: #F9F9F9;
+}
+
+.content {
 	padding: 0 40px;
 }
 
@@ -30,10 +34,59 @@ section {
     background: url("../img/hr.gif") repeat-x scroll 0 0 transparent;
     border: medium none;
     height: 5px;
-    margin: 25px 40px 50px;
+    margin: 25px 0 50px;
 }
 
 h4 {
 	text-transform: uppercase;
 	font-weight: normal !important;
 }
+
+/*phone only*/
+@media (max-width: 767px) {
+	
+	.content {
+		padding: 0 20px;
+	}
+	
+	footer section {
+		padding: 5px 20px 5px;
+	}
+}
+
+/*fancyheader*/
+
+
+section.fancyheader .fh_tab p {
+	font-weight: bold;
+	padding: 9px 40px;
+	
+}
+
+section.fancyheader {
+	border-color: #DD4B39 !important;
+	background-color: #3D3D3D;
+}
+
+section.fancyheader .container {
+	background-color: #3D3D3D;
+}
+section.fancyheader .container .afh {
+	font-size: 12px;
+	color: #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	padding: 20px 15px 20px 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+section.fancyheader .container .afh.last,
+section.fancyheader .container .afh.first {
+	border-right: none;
+}
+
+section.fancyheader .container .afh.first,
+section.fancyheader .container .afh.first div {
+	margin: 0;
+	padding: 0;
+}
+

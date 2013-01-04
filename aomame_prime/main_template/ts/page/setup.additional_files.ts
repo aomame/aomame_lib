@@ -20,11 +20,14 @@ page {
   	jquery_color = {$aomame.path.global.js}lib/jquery.color.js
   	superfish = {$aomame.path.global.plugin}superfish/js/superfish.js
   	script = {$aomame.path.js}script.js
+  	fancyheader = {$aomame.path.global.js}header/fancyheader.js
   }
   
   includeCSS {
   	header = {$aomame.path.global.css}header/theme_prime.css
+  	content = {$aomame.path.global.css}content/content.css
 	prime_style = {$aomame.path.css}style.css
+	fancyheader = {$aomame.path.global.css}header/fancyheader.css
   }
 }
 

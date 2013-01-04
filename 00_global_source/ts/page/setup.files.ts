@@ -48,7 +48,7 @@ page {
     50.value = <![endif]-->
     
   	210 = TEXT
-  	210.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.bootstrap.less}bootstrap.less" />
+  	210.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.less}bootstrap.less" />
 	220 = TEXT
 	220.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.bootstrap.less}responsive.less" />
 	
@@ -66,7 +66,7 @@ page {
   }
   
   includeCSS {
-	footer = {$aomame.path.global.css}footer/footer.css
+	footer = {$aomame.path.global.css}footer/footer_prime.css
   }
 }
 

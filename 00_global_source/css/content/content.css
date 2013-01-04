@@ -1,0 +1,46 @@
+.csc-default {
+	padding: 0;
+	margin: 0;
+}
+
+.csc-frame-invisible {
+	visibility: hidden;
+}
+
+.csc-frame-rulerBefore {
+	border-top: 1px solid #dedede;
+}
+
+.csc-frame-rulerAfter {
+	border-bottom: 1px solid #dedede;
+}
+
+.csc-frame-indent {
+	padding-left: 40px;
+}
+
+.frame_rounded_corders {
+	border-radius: 10px;
+}
+
+.frame_quote {
+    border-left: 3px solid #CCCCCC;
+    font-style: italic;
+    margin-left: 40px;
+    padding-left: 20px;
+}
+
+.frame_highlighted {
+	box-shadow: 0 0 20px -3px #fff
+}
+
+.frame_shadow_box {
+    background-color: #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 15px 2px #CCCCCC;
+    padding: 10px;
+}
+
+.center {
+	text-align: center;	
+}

@@ -18,10 +18,12 @@ page {
 					#ie_depricated < lib.ie_depricated
 					#breadcrumb < lib.breadcrumb
 					mobile_nav_secondlevel < lib.mobile_nav_secondlevel
-					mobile_footer < lib.mobile_footer
+					fancyheader < lib.fancyheader
     }
   }
 }
+
+
 
 [globalVar = LIT:1 = {$aomame.page.layout.block}]
 page.wrap = <div class="container">|</div>

@@ -207,3 +207,53 @@ tt_content.gridelements_pi1.20.10.setup {
 	}
 }
 
+#Footer 4 Cols
+tt_content.gridelements_pi1.20.10.setup {
+	# ID of gridelement
+	12 < temp.gridelements.defaultGridSetup
+	12 {
+		columns {
+			# colPos ID
+			1 < .default
+			1.wrap = <div class="span3 foo_1">|</div>
+			# colPos ID
+			2 < .default
+			2.wrap = <div class="span3 foo_2">|</div>
+			# colPos ID
+			3 < .default
+			3.wrap = <div class="span3 foo_3">|</div>
+			# colPos ID
+			4 < .default
+			4.wrap = <div class="span3 foo_4">|</div>
+			# colPos ID
+		}
+		wrap = <div class="footer_grid row-fluid">|</div>
+	}
+}
+
+
+#Fancyheader
+tt_content.gridelements_pi1.20.10.setup {
+	# ID of gridelement
+	13 < temp.gridelements.defaultGridSetup
+	13 {
+		columns {
+			# colPos ID
+			1 < .default
+			1.wrap = <div class="afh span4 first">|</div>
+			# colPos ID
+			2 < .default
+			2.wrap = <div class="afh span2">|</div>
+			# colPos ID
+			3 < .default
+			3.wrap = <div class="afh span2">|</div>
+			# colPos ID
+			4 < .default
+			4.wrap = <div class="afh span2">|</div>
+			# colPos ID
+			5 < .default
+			5.wrap = <div class="afh span2 last">|</div>
+		}
+		wrap = <div class="container">|</div>
+	}
+}

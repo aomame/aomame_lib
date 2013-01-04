@@ -10,14 +10,11 @@ page {
 					nav_secondlevel < lib.nav_secondlevel
 					#nav_collapse < lib.nav_collapse
 					header < lib.header
-					content_middle < lib.content_middle
-					content_left < lib.content_left
-					content_right < lib.content_right
+					content < lib.content
 					footer < lib.footer
 					#ie_depricated < lib.ie_depricated
-					#breadcrumb < lib.breadcrumb
-					mobile_nav_secondlevel < lib.mobile_nav_secondlevel
 					mobile_footer < lib.mobile_footer
+					fancyheader < lib.fancyheader
     }
   }
 }

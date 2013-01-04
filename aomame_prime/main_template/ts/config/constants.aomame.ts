@@ -12,12 +12,7 @@ aomame {
 										js = typo3conf/ext/aomame/template/00_global_source/bootstrap/js/
 										img = typo3conf/ext/aomame/template/00_global_source/bootstrap/img/
 						}
-						ext {
-										css = typo3conf/ext/aomame/template/00_global_source/ext/css/
-										html = typo3conf/ext/aomame/template/00_global_source/ext/html/
-										img = typo3conf/ext/aomame/template/00_global_source/ext/img/
-										js = typo3conf/ext/aomame/template/00_global_source/ext/js/
-						}
+						ext = typo3conf/ext/aomame/template/00_global_source/ext/
 						css = typo3conf/ext/aomame/template/00_global_source/css/
 						js = typo3conf/ext/aomame/template/00_global_source/js/
 						img = typo3conf/ext/aomame/template/00_global_source/img/
@@ -29,42 +24,78 @@ aomame {
 		ts = typo3conf/ext/aomame/template/aomame_prime/main_template/ts/
 		html = typo3conf/ext/aomame/template/aomame_prime/main_template/html/
 		css = typo3conf/ext/aomame/template/aomame_prime/main_template/css/
+		less = typo3conf/ext/aomame/template/aomame_prime/main_template/less/
 		js = typo3conf/ext/aomame/template/aomame_prime/main_template/js/
 		image = typo3conf/ext/aomame/template/aomame_prime/main_template/img/
-		bootstrap.img = typo3conf/ext/aomame/template/aomame_prime/main_template/img/bootstrap/
-		
+		bootstrap.img = typo3conf/ext/aomame/template/aomame_prime/main_template/img/bootstrap/	
 	}
 	
 	
 	
-	################
-	# PAGE BUILDER #
-	#################
-	page {		
+
+	page {	
+		############
+		# Settings #
+		############
+		setting {
+			site_name = Aomame Designs
+		}
+		
+		##########
+		# Layout #
+		##########
 		layout {
 			#wrap all content with a bootstrap container class
 			block = 1
 			
 			bootstrap{
 				class {
-					# options: pull-left | pull-right | (custom)
-					direction = pull-right
-					
 					navbar-fixed-top = 1
 					
 					# options: row | row-fluid
 					rows = row-fluid
 				}
 			}
-		}
+			
+			columns {
+				1_col {
+					middle = span12
+				}
+				2_col {
+					left = span9
+					right = span3
+				}
+				3_col {
+					left = span4
+					middle = span4
+					right = span4
+				}
+				1_col_nav {
+					nav = span3
+					middle = span9
+				}
+				2_col_nav {
+					nav = span3
+					left = span6
+					right =span3
+				}
 				
+			}
+		}
+		
+		###########
+		# HEADER  #
+		###########		
 		header {
 				# cat=Aomame: Page Structure/structure/01; type=boolean; label= Add the header
-				use_header = 0
+				use_header = 1
+				
+				#wrap with bootstrap class hero-unit
+				use_bootstrap_header_unit = 0
 				
 				#logo filename
 				logo {
-					filename = aomame.png
+					filename = logo/aomame_prime.png
 					altText = Aomame Prime
 				}
 				#pid of home page/rootpage
@@ -76,8 +107,19 @@ aomame {
 				# banner image url
 				banner_logo =  
 				
-				#rekursive vererben auf unterseiten
-				slide = -1
+				#rekursive vererben auf unterseiten: -1
+				slide = 0
+				
+				fancyheader {
+					active = 1
+					pid = 45
+					colPos = 0
+					visibility = all
+					tab {
+						img = fancyheader/tab_3.png
+						content = HOWTO3
+					}
+				}
 		}
 			
 		###############
@@ -85,61 +127,73 @@ aomame {
 		###############
 		nav {
 			firstlevel {
-				# cat=Aomame: Page Structure/structure/02; type=boolean; label= Add main menu
-				use_main_nav = 1
-				
-				# horizontal | vertical
-				main_navigation = horizontal
-				
-				# only possible when "main_navigation = horizontal"
-				# text | collapsible
-				menu_type = text
-				
-				# number of visible nav levels
-				main_nav_level_depth = 3
+				visibility = visible-desktop
+				direction = pull-right
 			}
 			
 			secondlevel {
-						# cat=Aomame: Page Structure/structure/03; type=boolean; label= Add secondlevel menu
-						use_secondlevel_nav = 1
-						
-						# horizontal | vertical
-						second_level_navigation = horizontal
-						
-						# show pages beginning from this level (first level is 0)
-						enrty_level = 1
-						
-						# show subpages until level (first level is 0)
-						out_level = 1
+				enrty_level = 1
+				visibility = visible-desktop
+				direction = 
 			}
 			
 			collapse {
 				enrty_level = 0
+				direction = pull-right
 			}
 			
 			mobile {
-				secondlevel {
-					enrty_level = 2
-				}
+				enrty_level = 2
+				direction = center
+				visibility = hidden-desktop
+			}
+			
+			breadcrumb {
+				active = 1
+				size = span12
 			}
 		}
 		
 		
-		# CONTENT
+		
+		###########
+		# CONTENT #
+		###########
 		content {
 			# default count of column, if pagelayout not set
 			column = 2
 		}
 			
-		# FOOTER
+		
+		##########
+		# FOOTER #
+		##########
 		footer {
-			# cat=Aomame: Page Structure/structure/04; type=boolean; label= Add footer
-			use_footer = 1
+			active = 1
 			
-			# PID of SysFolder where the footer content is stored
-			pid = 13
+			mainfooter {
+				active = 1
+				pid = 42
+				colPos = 0
+				visibility = hidden-phone
+			}
 			
-			colPos = 0
+			mobile_footer {
+				active = 1
+				pid = 42
+				colPos = 2
+				
+				visibility = visible-phone
+			}
+			
+			subfooter {
+				active = 1
+				pid = 42
+				colPos = 1
+				visibility = all
+			}
+			
+			
 		}
 
 	}
@@ -166,7 +220,7 @@ aomame {
 	#######################
 	# EXTENSION HANDLING  #
 	#######################
-	extension {
+	ext {
 		
 		#language menu
 		language {			
@@ -183,7 +237,12 @@ aomame {
 				
 		# NEWS  
 		news {
-			news_sysfolder_pid =
+			news_sysfolder_pid = 43
+			default_detail_view_pid = 34
+			
+			social {
+				show_share_buttons = 0
+			}
 		}
 	}
 	
@@ -204,14 +263,8 @@ aomame {
 		}
 		
 		print {
-			use_print_page = 0
-			
-			#url ofprint icon
-			#print_icon =   
-			
-			print_page_uid =
-			
-			print_type_num = 20
+			use_print_page = 1
+			print_icon =   
 		}
 		
 		pdf {
