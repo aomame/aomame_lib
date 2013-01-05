@@ -1,26 +1,53 @@
+##############################
+###   Available Navs       ###
+#
+#	1. Firstlevel nav (default)					: lib.nav_firstlevel
+#	2. Secondlevel nav (default)				: lib.nav_secondlevel
+#	3. Bootstrap Collapse (obsolete)			: lib.collapsible_nav
+#	4. Mobile, Secondlevel nav					: lib.mobile_nav
+#	5. Bootstrap Collapse Icon (helper)			: lib.nav_collapse
+#	6. Superfish nav							: lib.superfish_nav
+#	7. SET: Bootstrap Nav and Logo				: lib.bootstrap_nav_with_logo
+#	8. SET: Superfish nav with Logo + Mobile	: lib.superfish_nav_with_logo
+###--------------------------###
+
+
+
+
 ################################
 ###   SET  FIRSTLEVEL MENU   ###
 ###--------------------------###
 lib.nav_firstlevel = HMENU
-lib.nav_firstlevel.1 = TMENU
-lib.nav_firstlevel.1 {
-  NO = 1
-  NO {
-    linkWrap = <li class="firstlevel_menu_label">|</li>
-    stdWrap.htmlSpecialChars = 1
-  }
-  CUR = 1
-  CUR {
-    linkWrap = <li class="menu_current">|</li>
-    stdWrap.htmlSpecialChars = 1
-  }
-  ACT = 1
-  ACT {
-    linkWrap = <li class="active">|</li>
-    stdWrap.htmlSpecialChars = 1
-  }
+lib.nav_firstlevel {
+	1 = TMENU
+	1 {
+	  NO = 1
+	  NO {
+	    linkWrap = <li class="firstlevel_menu_label">|</li>
+	    stdWrap.htmlSpecialChars = 1
+	  }
+	  CUR = 1
+	  CUR {
+	    linkWrap = <li class="menu_current">|</li>
+	    stdWrap.htmlSpecialChars = 1
+	  }
+	  ACT = 1
+	  ACT {
+	    linkWrap = <li class="active">|</li>
+	    stdWrap.htmlSpecialChars = 1
+	  }
+	  
+	}
+	wrap = <ul class="nav">|</ul>
 }
-lib.nav_firstlevel.wrap = <div class="container nav-collapse"><ul class="nav">|</ul></div>
+
+[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.collapsible}]
+lib.nav_firstlevel.wrap = <div class="nav-collapse">|</div>
+[global]
+
+[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.wrap_container}]
+lib.nav_firstlevel.wrap = <div class="container">|</div>
+[global]
 
 
 ################################
@@ -181,11 +208,11 @@ lib.nav_secondlevel {
 
 
 #############################
-###   SET  COLLAPSE MENU  ###
+###   SET COLLAPSE MENU  ###
 ###-----------------------###
 
-lib.nav_collapse = HMENU
-lib.nav_collapse {
+lib.collapsible_nav = HMENU
+lib.collapsible_nav {
 	if.isTrue = {$aomame.page.nav.collapse.use_secondlevel_nav}
 	entryLevel = {$aomame.page.nav.collapse.enrty_level}
 	
@@ -498,3 +525,44 @@ lib.superfish_nav_with_logo {
 	wrap = <header><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></header>
 }
 
+
+# choose the navigation that is set in the aomame config file
+lib.main_navigation = COA
+lib.main_navigation {
+	
+	#if not set or 0
+	5 < lib.lib.nav_firstlevel
+	5.if {
+		isFalse = {$aomame.page.nav.firstlevel.type}
+	}
+
+	10 < lib.nav_firstlevel
+	10.if {
+		value = 1
+		equals = {$aomame.page.nav.firstlevel.type}
+	}
+
+	20 < lib.collapsible_nav
+	20.if {
+		value = 2
+		equals = {$aomame.page.nav.firstlevel.type}
+	}
+	
+	30 < lib.superfish_nav
+	30.if {
+		value = 3
+		equals = {$aomame.page.nav.firstlevel.type}
+	}
+	
+	40 < lib.bootstrap_nav_with_logo
+	40.if {
+		value = 4
+		equals = {$aomame.page.nav.firstlevel.type}
+	}
+	
+	50 < lib.superfish_nav_with_logo
+	50.if {
+		value = 5
+		equals = {$aomame.page.nav.firstlevel.type}
+	}
+}

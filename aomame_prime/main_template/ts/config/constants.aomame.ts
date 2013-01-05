@@ -31,14 +31,14 @@ aomame {
 	}
 	
 	
-	
 
 	page {	
 		############
 		# Settings #
 		############
-		setting {
+		settings {
 			site_name = Aomame Designs
+			rootpage_uid = 27
 		}
 		
 		##########
@@ -87,28 +87,16 @@ aomame {
 		# HEADER  #
 		###########		
 		header {
-				# cat=Aomame: Page Structure/structure/01; type=boolean; label= Add the header
-				use_header = 1
+				active = 1
+				homelink = 27
+				colPos = 1
+				slide = 0		
+				use_bootstrap_hero_unit = 0
 				
-				#wrap with bootstrap class hero-unit
-				use_bootstrap_header_unit = 0
-				
-				#logo filename
 				logo {
 					filename = logo/aomame_prime.png
 					altText = Aomame Prime
 				}
-				#pid of home page/rootpage
-				homelink = 27
-				
-				# PID of SysFolder where the header content is stored
-				pid = 85
-				
-				# banner image url
-				banner_logo =  
-				
-				#rekursive vererben auf unterseiten: -1
-				slide = 0
 				
 				fancyheader {
 					active = 1
@@ -127,8 +115,12 @@ aomame {
 		###############
 		nav {
 			firstlevel {
+				#1=firstlevel nav (default) : 2=Bootstrap collapse : 3=Superfish nav : 4=Bootstrap nav with logo : 5=Superfish nav with logo
+				type = 5
 				visibility = visible-desktop
 				direction = pull-right
+				collapsible = 1
+				wrap_container = 1
 			}
 			
 			secondlevel {
@@ -151,6 +143,8 @@ aomame {
 			breadcrumb {
 				active = 1
 				size = span12
+				entryLevel = 0
+				hide_on_rootpage = 1
 			}
 		}
 		
@@ -160,8 +154,7 @@ aomame {
 		# CONTENT #
 		###########
 		content {
-			# default count of column, if pagelayout not set
-			column = 2
+			
 		}
 			
 		

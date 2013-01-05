@@ -1,14 +1,18 @@
 #JS Additional Files
-
-
-
-
 page {
+
   headerData {
-  	## Namespace for additional files: 500-699: Add only files in that range ##
+	
+	## Do not change the value 220
+	220 = TEXT
+	220.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.bootstrap.less}responsive.less" />
+
+  	## Namespace for additional files: 501-700: Add only files in that range ##
   	510 = TEXT
   	510.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global.css}nav/superfish/theme_2.less" />
+
   }
+
 
   includeJS {
 	
@@ -25,9 +29,9 @@ page {
   
   includeCSS {
   	header = {$aomame.path.global.css}header/theme_prime.css
-  	content = {$aomame.path.global.css}content/content.css
 	prime_style = {$aomame.path.css}style.css
 	fancyheader = {$aomame.path.global.css}header/fancyheader.css
+	footer = {$aomame.path.global.css}footer/footer_prime.css
   }
 }
 

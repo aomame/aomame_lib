@@ -1,6 +1,5 @@
-
 lib.header = COA
-lib.header.if.isTrue = {$aomame.page.header.use_header}
+lib.header.if.isTrue = {$aomame.page.header.active}
 lib.header {
 	10 = CONTENT
 	10 {
@@ -8,24 +7,22 @@ lib.header {
 		select {
 			languageField = sys_language_uid
 			orderBy = sorting
-			where = colPos = 1
+			where = colPos = {$aomame.page.header.colPos}
 		}
-		renderObj.10 {
-			field = menu
-			ifEmpty.cObject = CONTENT
-			ifEmtpy.cObject {
-				wrap = <div class="empty">|</div>
+		
+		stdWrap {
+			required = 1
+			wrap = <div class="headconwrap">|</div>
+			wrap {
+				override = 
+				override.if.isFalse.cObject = COA
+			}
+			outerWrap = <div class="header head_content">|</div>
+			outerWrap {
+				override = <div class="hero-unit head_content">|</div>
+				override.if.isTrue = {$aomame.page.header.use_bootstrap_hero_unit}
 			}
 		}
-		wrap = <div class="headconwrap">|</div>
 		slide = {$aomame.page.header.slide}
 	}
-	
-	wrap = 
 }
-
-[globalVar = LIT:1 = {$aomame.page.header.use_bootstrap_header_unit}]
-lib.header.wrap = <div class="hero-unit head_content"> | </div>
-[else]
-lib.header.wrap = <div class="header head_content"> | </div>
-[global]

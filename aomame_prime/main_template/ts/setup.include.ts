@@ -40,12 +40,19 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.print.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.body_tag.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.ajax.ts">
-#<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.editpanel.ts">
 
 
-#PAGE TS overwrite and additional
+#PAGE TS local
 #==================================
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/page/setup.additional_files.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/page/setup.content.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/page/setup.ajax.ts">
+
+
+#PAGERENDERER:: always include at last of all libs
+#==================================
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.pagerenderer.ts">
+
+#PAGE local
+#==================================
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_prime/main_template/ts/page/setup.page.ts">
