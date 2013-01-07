@@ -1,14 +1,19 @@
 
-section.fancyheader {
+section.fancyheader_grid {
 	border-bottom: 3px solid;
+	border-top: 0px !important;
 	position: relative;
+	height: auto;
 }
 
-section.fancyheader .container {
+section.fancyheader_grid .container {
 	display: none;
+	height: auto;
 }
 
-section.fancyheader .fh_tab {
+section.fancyheader_grid .fh_tab {
+	display: none;
+	background:url('../../img/fancyheader/tab_3.png') no-repeat scroll 0 0 transparent;
 	width: 150px;
 	height: 45px;
 	position: absolute;
@@ -16,4 +21,8 @@ section.fancyheader .fh_tab {
 	cursor: pointer;
 	margin-top: 3px;
 	right: 25%;
+}
+
+section.fancyheader_grid .fh_tab.open {
+	background-position: 0 -45px;
 }

@@ -7,13 +7,13 @@ config {
 	typolinkCheckRootline = 1
 	typolinkEnableLinksAcrossDomains = 1
 	doctype = <!DOCTYPE html>
-	simulateStaticDocuments = {$aomame.extension.realurl.simulateStaticDocument}
+	simulateStaticDocuments = {$aomame.ext.realurl.simulateStaticDocument}
 	baseURL = {$aomame.head.baseURL}
-	tx_realurl_enable = {$aomame.extension.realurl.realurl_enable}
+	tx_realurl_enable = {$aomame.ext.realurl.realurl_enable}
 	prefixLocalAnchors = all
-	language = {$aomame.extension.language.default_language}
-	locale_all = {$aomame.extension.language.locale_all}
-	htmlTag_langKey = {$aomame.extension.language.htmlTag_langKey}
+	language = {$aomame.ext.language.default_language}
+	locale_all = {$aomame.ext.language.locale_all}
+	htmlTag_langKey = {$aomame.ext.language.htmlTag_langKey}
 	admPanel = {$aomame.option.sys.allow_admin_panel}
 }
 

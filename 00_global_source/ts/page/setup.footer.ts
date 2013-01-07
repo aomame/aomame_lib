@@ -13,7 +13,7 @@ lib.mainfooter {
 		}
 	}
 	
-	wrap = <section class="mainfooter {$aomame.page.footer.mainfooter.visibility}">|</section>
+	wrap = <footer class="footer_grid {$aomame.page.footer.mainfooter.visibility}"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="content">|</div></div></div></footer>
 }
 
 lib.subfooter = COA
@@ -29,7 +29,7 @@ lib.subfooter {
 			where = colPos = {$aomame.page.footer.subfooter.colPos}
 		}
 	}
-	wrap = <section class="subfooter {$aomame.page.footer.subfooter.visibility}">|</section>
+	wrap = <footer class="subfooter_grid {$aomame.page.footer.subfooter.visibility}"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="content">|</div></div></div></footer>
 }
 
 lib.mobile_footer = COA
@@ -45,7 +45,7 @@ lib.mobile_footer {
 			where = colPos = {$aomame.page.footer.mobile_footer.colPos}
 		}
 	}
-	wrap = <section class="mobile_footer {$aomame.page.footer.mobile_footer.visibility}">|</section>
+	wrap = <footer class="mobilefooter_grid {$aomame.page.footer.mobile_footer.visibility}"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="content">|</div></div></div></footer>
 }
 
 
@@ -56,5 +56,4 @@ lib.footer {
 	1 < lib.mobile_footer
 	2 < lib.mainfooter
 	3 < lib.subfooter
-	wrap = <footer><div class="container">|</div></footer>
 }

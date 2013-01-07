@@ -12,14 +12,14 @@ lib.header {
 		
 		stdWrap {
 			required = 1
-			wrap = <div class="headconwrap">|</div>
+			wrap = <div class="container">|</div>
 			wrap {
 				override = 
 				override.if.isFalse.cObject = COA
 			}
-			outerWrap = <div class="header head_content">|</div>
+			outerWrap = <header class="header_grid">|</header>
 			outerWrap {
-				override = <div class="hero-unit head_content">|</div>
+				override = <header class="header_grid hero-unit">|</header>
 				override.if.isTrue = {$aomame.page.header.use_bootstrap_hero_unit}
 			}
 		}

@@ -19,34 +19,31 @@
 ###--------------------------###
 lib.nav_firstlevel = HMENU
 lib.nav_firstlevel {
+	
 	1 = TMENU
 	1 {
-	  NO = 1
-	  NO {
-	    linkWrap = <li class="firstlevel_menu_label">|</li>
-	    stdWrap.htmlSpecialChars = 1
-	  }
-	  CUR = 1
-	  CUR {
-	    linkWrap = <li class="menu_current">|</li>
-	    stdWrap.htmlSpecialChars = 1
-	  }
-	  ACT = 1
-	  ACT {
-	    linkWrap = <li class="active">|</li>
-	    stdWrap.htmlSpecialChars = 1
-	  }
-	  
+		NO = 1
+	  	NO {
+	    	linkWrap = <li class="firstlevel_menu_label">|</li>
+	    	stdWrap.htmlSpecialChars = 1
+	  	}
+	  	CUR = 1
+	  	CUR {
+	    	linkWrap = <li class="current">|</li>
+	    	stdWrap.htmlSpecialChars = 1
+	  	}
+	  	ACT = 1
+	  	ACT {
+	    	linkWrap = <li class="active">|</li>
+	    	stdWrap.htmlSpecialChars = 1
+	  	}
 	}
-	wrap = <ul class="nav">|</ul>
 }
 
 [globalVar = LIT:1 = {$aomame.page.nav.firstlevel.collapsible}]
-lib.nav_firstlevel.wrap = <div class="nav-collapse">|</div>
-[global]
-
-[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.wrap_container}]
-lib.nav_firstlevel.wrap = <div class="container">|</div>
+lib.nav_firstlevel.wrap = <div class="nav-collapse collapse {$aomame.page.nav.firstlevel.direction}"><ul class="nav">|</ul></div>
+[else]
+lib.nav_firstlevel.wrap = <div class="{$aomame.page.nav.firstlevel.direction}"><ul class="nav">|</ul></div>
 [global]
 
 
@@ -213,7 +210,7 @@ lib.nav_secondlevel {
 
 lib.collapsible_nav = HMENU
 lib.collapsible_nav {
-	if.isTrue = {$aomame.page.nav.collapse.use_secondlevel_nav}
+	if.isTrue = {$aomame.page.nav.collapse.active}
 	entryLevel = {$aomame.page.nav.collapse.enrty_level}
 	
 	  1 = TMENU
@@ -498,16 +495,23 @@ lib.superfish_nav {
 ###-----------------------------------------------------------------###
 lib.bootstrap_nav_with_logo = COA
 lib.bootstrap_nav_with_logo {
-	1 < lib.nav_collapse
-	2 < lib.logo
-	3 < lib.nav_firstlevel
+	10 = COA
+	10 {
+		10 = COA
+		10 < lib.nav_collapse
+		20 = COA
+		20 < lib.logo
+		30= COA
+		30 < lib.nav_firstlevel
+	}
 }
-[globalVar = LIT:1 = {$aomame.page.layout.bootstrap.class.navbar-fixed-top}]
-lib.bootstrap_nav_with_logo.wrap = <div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container"> | </div></div></div>
-[else]
-lib.bootstrap_nav_with_logo.wrap = <div class="navbar"><div class="navbar-inner"><div class="container"> | </div></div></div>
-[global]
 
+
+[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.navbar_fixed_top}]
+lib.bootstrap_nav_with_logo.10.wrap = <div class="navbar navbar-fixed-top"><div class="navbar-inner">|</div></div>
+[else]
+lib.bootstrap_nav_with_logo.10.wrap = <div class="navbar"><div class="navbar-inner">|</div></div>
+[global]
 
 ################################################################################
 ###   Superfish Nav. with Logo | Collapsed: Dropdown Nav. | Mobile Dropdown  ###
@@ -522,8 +526,9 @@ lib.superfish_nav_with_logo {
 		2 < lib.superfish_nav
 		wrap = <div class="span8">|</div>
 	}
-	wrap = <header><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></header>
 }
+
+
 
 
 # choose the navigation that is set in the aomame config file
@@ -566,3 +571,9 @@ lib.main_navigation {
 		equals = {$aomame.page.nav.firstlevel.type}
 	}
 }
+
+[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.wrap_as_header}]
+lib.main_navigation.wrap = <header class="nav_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></div></header>
+[else]
+lib.main_navigation.wrap = <div class="nav_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></div></div>
+[global]

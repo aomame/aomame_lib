@@ -1,6 +1,7 @@
 lib.breadcrumb = COA
 lib.breadcrumb.if.isTrue = {$aomame.page.nav.breadcrumb.active}
 lib.breadcrumb {
+	
 	10 = HMENU
 	10 {
 		special = rootline
@@ -13,7 +14,8 @@ lib.breadcrumb {
 	    1 = TMENU
 	    1 {
 	    	noBlur = 1
-	    
+	    	wrap = <div class="rootline">|</div>
+	    	
 	    	# Append spaces and >> to normal linked breadcrumb items
 	    	NO.allWrap = |&#32;&raquo;&#32;
 	    	NO.stdWrap.htmlSpecialChars = 1
@@ -28,7 +30,7 @@ lib.breadcrumb {
 	}
 	
 	stdWrap {
-  		wrap = <div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="{$aomame.page.nav.breadcrumb.size} breadcrumb">|</div></div>
+  		wrap = <section class="breadcrumb_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="breadcrumb"><div class="{$aomame.page.nav.breadcrumb.size}">|</div></div></div></div></section>
   		required = 1
 	}
 }

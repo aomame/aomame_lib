@@ -6,6 +6,6 @@ page {
 }
 
 #wrap the page with the bootstrap container
-[globalVar = LIT:1 = {$aomame.page.layout.block}]
+[globalVar = LIT:1 = {$aomame.page.settings.block_design}]
 page.wrap = <div class="container">|</div>
 [global]

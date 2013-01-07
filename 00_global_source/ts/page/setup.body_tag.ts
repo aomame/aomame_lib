@@ -14,30 +14,25 @@ lib.body_tag {
 		 3 = TEXT
 		 3.value = tripple_col
 		 4 = TEXT
-		 4.value = double_col_nav
+		 4.value = single_col_nav
 		 5 = TEXT
-		 5.value = single_col_nav
+		 5.value = double_col_nav
 		 6 = TEXT
 		 6.value = no_header
 		 7 = TEXT
 		 7.value = no_header_with_nav 
+		 
+		 stdWrap.noTrimWrap = || |
     }
 
-    #class divider
-    20 = TEXT
-    20.value = &nbsp;
     
     #makes a class uid of the current page
-    30 = HTML
-    30 {
-    	    value {
-    	    	    field = uid
-    	    	    wrap = id|
-    	    }
-    }
+    20 < lib.store.uid
+    20.stdWrap.wrap = id|
+    
+    
+    
     stdWrap.wrap = <body class ="|">
 }
 
-page {
-	bodyTagCObject < lib.body_tag
-}
+page.bodyTagCObject < lib.body_tag

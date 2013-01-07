@@ -11,9 +11,12 @@ lib.fancyheader {
 			orderBy = sorting
 			where = colPos = {$aomame.page.header.fancyheader.colPos}
 		}
+		wrap = <div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></div>
 	}
-	20 = HTML
-	20.value = <div class="fh_tab" style="background:url('{$aomame.path.global.img}{$aomame.page.header.fancyheader.tab.img}') no-repeat scroll 0 0 transparent;"><p>{$aomame.page.header.fancyheader.tab.content}</p></div>
 	
-	wrap = <section class="fancyheader {$aomame.page.header.fancyheader.visibility} row-fluid">|</section>
+	
+	30 = HTML
+	30.value = <div class="fh_tab"><p>{$aomame.page.header.fancyheader.tab.content}</p></div>
+	
+	wrap = <section class="fancyheader_grid {$aomame.page.header.fancyheader.visibility}">|</section>
 }

@@ -2,7 +2,7 @@
 # TEMPLATES #
 # --------- #
 #  MAIN TEMPLATE # 
-page.10.file = {$aomame.path.global.html}template.html 
+page.10.file = {$aomame.path.global}html/template.html 
 
 page {
   headerData {
@@ -22,7 +22,7 @@ page {
     
     ## 101 - 200 Space for less files
   	210 = TEXT
-  	210.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.less}bootstrap.less" />
+  	210.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}main_template/less/bootstrap.less" />
 	## ! 220 is reserved for local include of bootstrap-responsive.less
 	
 	
@@ -32,17 +32,17 @@ page {
 	 
 	## include last - less rendering
 	1010 = TEXT
-	1010.value = <script type="text/javascript" src="{$aomame.path.global.js}lib/less-{$aomame.head.less_version}.min.js"></script>
+	1010.value = <script type="text/javascript" src="{$aomame.path.global}js/lib/less-{$aomame.head.less_version}.min.js"></script>
   }
 
   includeJSFooter {
-	jquery = {$aomame.path.global.js}lib/jquery-{$aomame.head.jquery_version}.min.js
+	jquery = {$aomame.path.global}js/lib/jquery-{$aomame.head.jquery_version}.min.js
 	jquery.forceOnTop = {$aomame.head.jquery_on_top}
-	bootstrap = {$aomame.path.global.bootstrap.js}bootstrap.min.js
+	bootstrap = {$aomame.path.global}bootstrap/js/bootstrap.min.js
   }
   
   includeCSS {
-	content = {$aomame.path.global.css}content/content.css
+	content = {$aomame.path.global}css/content/content.css
   }
 }
 

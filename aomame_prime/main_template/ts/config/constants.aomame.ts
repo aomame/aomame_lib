@@ -4,33 +4,10 @@
 
 aomame {
 	
-	# PATH MANAGEMENT
 	path {
-		global {
-						bootstrap {
-										less = typo3conf/ext/aomame/template/00_global_source/bootstrap/less/
-										js = typo3conf/ext/aomame/template/00_global_source/bootstrap/js/
-										img = typo3conf/ext/aomame/template/00_global_source/bootstrap/img/
-						}
-						ext = typo3conf/ext/aomame/template/00_global_source/ext/
-						css = typo3conf/ext/aomame/template/00_global_source/css/
-						js = typo3conf/ext/aomame/template/00_global_source/js/
-						img = typo3conf/ext/aomame/template/00_global_source/img/
-						html = typo3conf/ext/aomame/template/00_global_source/html/
-						plugin = typo3conf/ext/aomame/template/00_global_source/plugin/
-		}
-		maintemplate = typo3conf/ext/aomame/template/aomame_prime/main_template/
-		exttemplate = typo3conf/ext/aomame/template/aomame_prime/ext_template/
-		ts = typo3conf/ext/aomame/template/aomame_prime/main_template/ts/
-		html = typo3conf/ext/aomame/template/aomame_prime/main_template/html/
-		css = typo3conf/ext/aomame/template/aomame_prime/main_template/css/
-		less = typo3conf/ext/aomame/template/aomame_prime/main_template/less/
-		js = typo3conf/ext/aomame/template/aomame_prime/main_template/js/
-		image = typo3conf/ext/aomame/template/aomame_prime/main_template/img/
-		bootstrap.img = typo3conf/ext/aomame/template/aomame_prime/main_template/img/bootstrap/	
+		global = typo3conf/ext/aomame/template/00_global_source/
+		local = typo3conf/ext/aomame/template/aomame_prime/
 	}
-	
-	
 
 	page {	
 		############
@@ -39,49 +16,14 @@ aomame {
 		settings {
 			site_name = Aomame Designs
 			rootpage_uid = 27
+			block_design = 1
 		}
 		
-		##########
-		# Layout #
-		##########
-		layout {
-			#wrap all content with a bootstrap container class
-			block = 1
-			
-			bootstrap{
-				class {
-					navbar-fixed-top = 1
-					
-					# options: row | row-fluid
-					rows = row-fluid
-				}
-			}
-			
-			columns {
-				1_col {
-					middle = span12
-				}
-				2_col {
-					left = span9
-					right = span3
-				}
-				3_col {
-					left = span4
-					middle = span4
-					right = span4
-				}
-				1_col_nav {
-					nav = span3
-					middle = span9
-				}
-				2_col_nav {
-					nav = span3
-					left = span6
-					right =span3
-				}
-				
-			}
-		}
+		
+		# layout will be removed : value "rows" comes to settings
+		layout.bootstrap.class.rows = row-fluid
+		
+		
 		
 		###########
 		# HEADER  #
@@ -119,8 +61,13 @@ aomame {
 				type = 5
 				visibility = visible-desktop
 				direction = pull-right
-				collapsible = 1
-				wrap_container = 1
+				collapsible = 0
+				wrap_as_header = 1
+				navbar_fixed_top = 0
+				search {
+					add_to_nav = 0
+					direction = pull-right
+				}
 			}
 			
 			secondlevel {
@@ -130,6 +77,7 @@ aomame {
 			}
 			
 			collapse {
+				active = 1
 				enrty_level = 0
 				direction = pull-right
 			}
@@ -142,7 +90,8 @@ aomame {
 			
 			breadcrumb {
 				active = 1
-				size = span12
+				#custom size: set in local breadcrumb.ts - misuse this field
+				size = breadcrumb_inner
 				entryLevel = 0
 				hide_on_rootpage = 1
 			}
@@ -154,7 +103,29 @@ aomame {
 		# CONTENT #
 		###########
 		content {
-			
+			columns {
+				1_col {
+					middle = span12
+				}
+				2_col {
+					left = span9
+					right = span3
+				}
+				3_col {
+					left = span4
+					middle = span4
+					right = span4
+				}
+				1_col_nav {
+					nav = span3
+					middle = span9
+				}
+				2_col_nav {
+					nav = span3
+					left = span6
+					right =span3
+				}
+			}
 		}
 			
 		
@@ -231,6 +202,7 @@ aomame {
 		# NEWS  
 		news {
 			news_sysfolder_pid = 43
+			default_single_view_pid = 34
 			default_detail_view_pid = 34
 			
 			social {
@@ -252,7 +224,6 @@ aomame {
 		sys {
 			# User_TSconfig has to allow Admin Panel also
 			allow_admin_panel = 0
-			
 		}
 		
 		print {
