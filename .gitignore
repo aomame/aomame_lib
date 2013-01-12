@@ -6,9 +6,4 @@
 
 
 #ignor local projects
-aomame/*
-aomame_mobile/*
-aomame_old/*
-dev/*
-offer/*
-easy_aomame_ch/*
+#aomame/*
