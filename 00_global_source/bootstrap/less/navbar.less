@@ -9,7 +9,7 @@
 // Base class and wrapper
 .navbar {
   overflow: visible;
-  margin-bottom: @baseLineHeight;
+  margin-bottom: @navbarBaseLineHeight;
 
   // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
   *position: relative;
@@ -33,9 +33,11 @@
 
 // Set width to auto for default container
 // We then reset it for fixed navbars in the #gridSystem mixin
-.navbar .container {
-  width: auto;
-}
+// @aomame: this disable the option to get a block layout, even if the content should be wide. use only local if needed
+//			also set in responsive-navbar.less
+//.navbar .container {
+//  width: auto;
+//}
 
 // Override the default collapsed state
 .nav-collapse.collapse {

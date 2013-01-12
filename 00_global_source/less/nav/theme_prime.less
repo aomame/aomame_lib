@@ -1,0 +1,230 @@
+/*!
+*  PRIME NAVIGATION
+*
+* --Variables : to define local--
+*
+* @firstlevelNavFontSize:					 16px;
+* @firstlevelNavPaddingTop:					 20px;
+*
+*
+*
+* @sidenavBackgroundColor: 			  	  #ffffff;
+* @sidenavMargin: 					 	 30px 0 0;
+* @sidenavPadding:								0;
+* @sidenavSubsitesBackground:			 darken(@sidenavBackgroundColor, 15%);
+*
+* //Hover
+* @sidenavLinkBackgroundHover:		  	   #F5F5F5;
+* 
+* 
+* //Borders
+* @sidenavLinkBorder:			 1px solid #E5E5E5;
+* @sidenavBorderRadius:					  	   6px;
+* @sidenavFirstLinkBorder:		  	   6px 6px 0 0;
+* @sidenavLastLinkBorder:			   0 0 6px 6px;
+* 
+* 
+* //Affix
+* @sidenavAffixTop:						 	  40px;
+* @sidenavAffixBottom:						 270px;
+* 
+* 
+* //Current
+* @navbarLinkColorCurrent:					#DD4B39;
+* @navbarLinkBackgroundCurrent:			transparent;
+*
+*
+* //this vars are already set by bootstrap - dont have to set again
+* @navbarLinkColor
+* @navbarLinkColorActive
+* @navbarLinkBackgroundActive
+* @navbarLinkColorHover
+* @navbarLinkBackgroundHover
+*
+********************/
+
+
+// Firstnav
+//*************
+
+.firstlevel_nav {
+	padding-top: @firstlevelNavPaddingTop;
+	font-size: @firstlevelNavFontSize;
+}
+
+.firstlevel_nav li > a {
+	color: @navbarLinkColor;
+	&:hover {
+    	color: @navbarLinkColorHover;
+		background: @navbarLinkBackgroundHover;
+  	}
+}
+
+.firstlevel_nav li.current > a {
+	color: @navbarLinkColorCurrent;
+	background: @navbarLinkBackgroundCurrent;
+}
+
+.firstlevel_nav li.active > a {
+	color: @navbarLinkColorActive;
+	background:@navbarLinkBackgroundActive;
+	box-shadow: none !important;
+}
+
+
+
+
+//  SIDENAV
+//**************
+// ** level 1 **
+.sidenav {
+    border-radius: @sidenavBorderRadius;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    margin: @sidenavMargin;
+    padding: @sidenavPadding;
+    width: auto;
+}
+
+.sidenav li {
+	list-style: none;
+}
+
+.sidenav li a {
+	color: @navbarLinkColor;
+	&:hover {
+    	color: @navbarLinkColorHover;
+  	}
+}
+
+.sidenav li a.current {
+	color: @navbarLinkColorCurrent;
+}
+
+
+.sidenav > li:first-child > a {
+    border-radius: @sidenavFirstLinkBorder;
+}
+
+.sidenav > li:last-child > a {
+    border-radius: @sidenavLastLinkBorder;
+}
+
+.sidenav > .current > a {
+    border: 0 none;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+    padding: 9px 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sidenav .icon-chevron-right {
+    float: right;
+    margin-right: -6px;
+    margin-top: 2px;
+    opacity: 0.25;
+}
+
+.sidenav a .icon-chevron-right {
+    background-image: url("../../bootstrap/img/glyphicons-halflings.png");
+    opacity: 0.25;
+}
+
+.sidenav  a.current .icon-chevron-right {
+    opacity: 0.75;
+}
+
+.sidenav a:hover .icon-chevron-right,
+.sidenav  a.current:hover .icon-chevron-right {
+    opacity: 0.5;
+}
+
+
+// *** level 1 *** //
+
+.sidenav > ul {
+	background-color: @sidenavBackgroundColor;
+}
+
+.sidenav > li > a {
+    border: @sidenavLinkBorder;
+    border-color: @sidenavLinkBorderColor;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+    &:hover {
+    	background-color: darken(@sidenavLinkBackgroundHover, 12%);
+    }
+}
+
+
+
+// *** level 2 *** //
+
+.sidenav > li > ul {
+	background-color: darken(@sidenavBackgroundColor, 4%);
+	margin-left: 0;
+}
+
+.sidenav > li > ul > li > a {
+    border: @sidenavLinkBorder;
+    border-color: darken(@sidenavLinkBorderColor, 4%);
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px 8px 24px;
+    &:hover {
+    	background-color: darken(@sidenavLinkBackgroundHover, 12%);
+    }
+}
+
+
+
+// *** level 3 *** //
+
+.sidenav > li > ul > li > ul {
+	background-color: darken(@sidenavBackgroundColor, 8%);
+	margin-left: 0;
+}
+
+.sidenav > li > ul > li > ul > li > a {
+	border: @sidenavLinkBorder;
+	border-color: darken(@sidenavLinkBorderColor, 8%);
+	display: block;
+    margin: 0 0 -1px;
+	padding: 4px 14px 4px 32px;
+	&:hover {
+    	background-color: darken(@sidenavLinkBackgroundHover, 12%);
+    }
+}
+
+
+// *** level 3 *** //
+
+.sidenav > li > ul > li > ul > li > ul {
+	background-color: darken(@sidenavBackgroundColor, 8%);
+	margin-left: 0;
+}
+
+.sidenav > li > ul > li > ul > li > ul > li > a {
+	border: @sidenavLinkBorder;
+	border-color: darken(@sidenavLinkBorderColor, 8%);
+	display: block;
+    margin: 0 0 -1px;
+	padding: 4px 14px 4px 44px;
+	&:hover {
+    	background-color: darken(@sidenavLinkBackgroundHover, 12%);
+    }
+}
+
+
+
+/*** Bootstrap Affix ***/
+.sidenav.affix {
+    top: @sidenavAffixTop;
+    position: static;
+    width: auto;
+}
+
+.sidenav.affix-bottom {
+    bottom: @sidenavAffixBottom;
+    position: absolute;
+    top: auto;
+}

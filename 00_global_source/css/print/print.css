@@ -1,0 +1,120 @@
+
+body {
+	width: 870px;
+	margin:0;
+	padding: 20px 0;
+	font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+}
+
+.clear{
+	clear: both;
+}
+
+/* Print Info Header */
+/*********************/
+.print_info_header {
+	margin: 20px;
+}
+.pih_data {
+	float: left;
+}
+
+/*HEADERS*/
+/*********/
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 10px 0;
+    text-rendering: optimizelegibility;
+}
+
+h1 {font-size: 24px;}
+h2 {font-size: 20px;}
+h3 {font-size: 18px;}
+h4 {font-size: 18px;}
+h5 {font-size: 24px;}
+h6 {font-size: 24px;}
+
+h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+
+
+/* LAYOUT:  single col with nav */
+/********************************/
+.layout_single_col_nav .col_middle {
+	width: 90%;
+	padding: 0 20px;
+}
+
+/* LAYOUT:  double col with nav */
+/********************************/
+.layout_double_col_nav .col_left {
+	float: left;
+	width: 45%;
+	padding: 0 20px;
+}
+
+.layout_double_col_nav .col_right {
+	float: left;
+	width: 45%;
+	padding: 0 20px;
+}
+
+
+
+/* hide all navigations */
+.col_nav,
+.breadcrumb {
+	display: none;
+}
+
+/* FOOTER */
+/**********/
+
+footer {
+	padding: 20px 20px;
+}
+
+div[class*="foo"] h1,
+div[class*="foo"] h2,
+div[class*="foo"] h3,
+div[class*="foo"] h4,
+div[class*="foo"] h5,
+div[class*="foo"] h6 {
+	font-weight: bold;
+	font-size: 16px;
+}
+div[class*="foo"] {
+	float: left;
+	width: 25%;
+}
+
+footer ul {
+	padding: 0;
+	margin-top: 10px;
+}
+
+footer li {
+	list-style: none outside none;
+}
+
+
+/* LINK Container */
+/******************/
+.linkcontainer {
+	padding: 20px;
+}
+
+.linkcontainer .lc_header h1 {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.linkcontainer li {
+	line-height: 20px;
+}
