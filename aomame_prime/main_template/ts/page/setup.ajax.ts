@@ -1,1 +1,0 @@
-ajax.10 < plugin.tx_aomameshowbiz_pi1
