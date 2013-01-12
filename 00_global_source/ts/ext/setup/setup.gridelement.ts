@@ -224,7 +224,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			3.wrap = <div class="span3 foo_3">|</div>
 			# colPos ID
 			4 < .default
-			4.wrap = <div class="span3 foo_4">|</div>
+			4.wrap = <div class="span3 foo_4">|</div><div class="clear"></div>
 			# colPos ID
 		}
 	}

@@ -1,3 +1,18 @@
+#---------------------------------------------------------------------
+#
+# (c) 2013 Patrick crausaz <support@aomame.ch>
+# 
+#  This script is part of the Aomame template library, which is 
+#  free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  The GNU General Public License can be found at
+#  http://www.gnu.org/copyleft/gpl.html.
+#
+#---------------------------------------------------------------------
+
 lib.breadcrumb = COA
 lib.breadcrumb.if.isTrue = {$aomame.page.nav.breadcrumb.active}
 lib.breadcrumb {
@@ -30,7 +45,7 @@ lib.breadcrumb {
 	}
 	
 	stdWrap {
-  		wrap = <section class="breadcrumb_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}"><div class="breadcrumb"><div class="{$aomame.page.nav.breadcrumb.size}">|</div></div></div></div></section>
+  		wrap = <section class="breadcrumb_grid"><div class="{$aomame.page.settings.layout.container}"><div class="{$aomame.page.settings.layout.row}"><div class="breadcrumb"><div class="{$aomame.page.nav.breadcrumb.size}">|</div></div></div></div></section>
   		required = 1
 	}
 }

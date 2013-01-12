@@ -1,17 +1,32 @@
-##############################
-###   Available Navs       ###
+#---------------------------------------------------------------------
 #
-#	1. Firstlevel nav (default)					: lib.nav_firstlevel
-#	2. Secondlevel nav (default)				: lib.nav_secondlevel
-#	3. Bootstrap Collapse (obsolete)			: lib.collapsible_nav
-#	4. Mobile, Secondlevel nav					: lib.mobile_nav
-#	5. Bootstrap Collapse Icon (helper)			: lib.nav_collapse
-#	6. Superfish nav							: lib.superfish_nav
-#	7. SET: Bootstrap Nav and Logo				: lib.bootstrap_nav_with_logo
-#	8. SET: Superfish nav with Logo + Mobile	: lib.superfish_nav_with_logo
-###--------------------------###
+# (c) 2013 Patrick crausaz <support@aomame.ch>
+# 
+#  This script is part of the Aomame template library, which is 
+#  free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  The GNU General Public License can be found at
+#  http://www.gnu.org/copyleft/gpl.html.
+#
+#---------------------------------------------------------------------
 
 
+#---------------------------------------------------------------------
+#     Available Navs 
+#     ---------------------------------------
+#  1. Firstlevel nav (default)              : lib.nav_firstlevel
+#  2. Secondlevel nav (default)             : lib.nav_secondlevel
+#  3. Bootstrap Collapse (obsolete)         : lib.collapsible_nav
+#  4. Mobile, Secondlevel nav               : lib.mobile_nav
+#  5. Bootstrap Collapse Icon (helper)      : lib.nav_collapse
+#  6. Superfish nav                         : lib.superfish_nav
+#  7. SET: Bootstrap Nav and Logo           : lib.bootstrap_nav_with_logo
+#  8. SET: Superfish nav with Logo + Mobile : lib.superfish_nav_with_logo
+#  
+#---------------------------------------------------------------------
 
 
 ################################
@@ -38,167 +53,93 @@ lib.nav_firstlevel {
 	    	stdWrap.htmlSpecialChars = 1
 	  	}
 	}
+	
+	
+	stdWrap {
+		outerWrap = <div class="firstlevel_nav">|</div>
+		outerWrap.if {
+			value = 4
+			equals = {$aomame.page.nav.firstlevel.type}
+		}
+	}
+	
+	wrap = <div class="nav-collapse collapse"><ul class="nav {$aomame.page.nav.firstlevel.direction}">|</ul></div>
+	wrap.override = <ul class="nav {$aomame.page.nav.firstlevel.direction}">|</ul>
+	wrap.override.if { 
+		isFalse = {$aomame.page.nav.firstlevel.collapsible}
+	}
 }
 
-[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.collapsible}]
-lib.nav_firstlevel.wrap = <div class="nav-collapse collapse {$aomame.page.nav.firstlevel.direction}"><ul class="nav">|</ul></div>
-[else]
-lib.nav_firstlevel.wrap = <div class="{$aomame.page.nav.firstlevel.direction}"><ul class="nav">|</ul></div>
-[global]
 
 
 ################################
 ###   SET  SECONDLEVEL MENU  ###
 ###--------------------------###
-
 lib.nav_secondlevel = HMENU
 lib.nav_secondlevel {
 	entryLevel = {$aomame.page.nav.secondlevel.enrty_level}
 	
-	  1 = TMENU
-	  1 {
-	    #expAll =1
-	    wrap = <ul class="subnavi">|</ul>
+	1 = TMENU
+	1 {
+	 	#expAll =1
+	    wrap = <ul class="nav nav-list sidenav">|</ul>
 	    noBlur = 1
 	    expAll = 0
-	    target = self
+	    target = _top
 	      
-	    NO = 1
-	    NO {
-	      ATagParams = class="btn btn-secondary btn-large"
-	      wrapItemAndSub = <li class="secondlevel_no">|</li>
-	      #stdWrap.htmlSpecialChars = 1
-	      
-	      1 = COA
-	      1 {
-		10 = TEXT
-		10 {
-		  field = title
-		  listNum = 0
-		  listNum.splitChar = |
-		}
-		20 < .10
-		20{
-		  listNum = 1
-		  wrap = <br />|
-		  required = 1
-		}
-	      }
-	      stdWrap.field >
-	      stdWrap.cOnject = COA
-	      stdWrap.cObject < .1
+		NO = 1
+		NO {
+			wrapItemAndSub = <li>|</li>
+		    stdWrap {
+		    	innerWrap = <i class="{$aomame.page.nav.secondlevel.icon.name}"></i>
+		    	innerWrap.if {
+		    		isTrue = {$aomame.page.nav.secondlevel.icon.active}
+		    	}
+		    	#htmlSpecialChars = 1
+		    }
+		    
+		    10 = COA
+		    10 {
+				10 = TEXT
+				10 {
+					field = nav_title // title
+					listNum = 0
+					listNum.splitChar = |
+				}
+			
+				20 < .10
+				20{
+					listNum = 1
+					wrap = <br />|
+					required = 1
+				}
+	    	}
+		    stdWrap.field >
+		    stdWrap.cOnject = COA
+		    stdWrap.cObject < .1
 	    }
 	    
 	    CUR <.NO
-	    CUR {
-		wrapItemAndSub = <li class="secondlevel_cur">|</li>
-		ATagParams = class="btn btn-primary btn-large"
-	    }
+	    CUR.ATagParams = class="current"
 	    
 	    ACT <.NO
-	    ACT {
-	       wrapItemAndSub = <li class="secondlevel_act">|</li>
-		ATagParams = class="btn btn-secondary btn-large"
-	    }
-	  }
+	    ACT.ATagParams = class="active"
+	}
 
 
 	
-	  2 < .1
-	  2 {
-		wrap = <ul class="navlevel_3">|</ul>
+	2 < .1
+	2 {
+		wrap = <ul>|</ul>
 		
-		NO.wrapItemAndSub = <li class="thrirdlevel_no menu_label">|</li>
-		NO.ATagParams = class="btn btn-secondary btn-small"
-		NO.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		NO.wrapItemAndSub.insertData=1
-		
-		CUR.wrapItemAndSub = <li class="thrirdlevel_cur menu_label">|</li>
-		CUR.ATagParams = class="btn btn-primary btn-small"
-		CUR.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		CUR.wrapItemAndSub.insertData=1
-		
-		ACT.wrapItemAndSub = <li class="thrirdlevel_act menu_label">|</li>
-    		ACT.ATagParams = class="btn btn-secondary btn-small"
-		ACT.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		ACT.wrapItemAndSub.insertData=1
-		
-    		# NO + Uebersetzung nicht vorhanden
+		# NO + Uebersetzung nicht vorhanden
 		USERDEF1 < .NO
 		# ACT + Uebersetzung nicht vorhanden
 		USERDEF2 < .ACT
   	}
 	
-	3 < .1
-	3 {
-		wrap = <ul class="navlevel_4">|</ul>
-		
-		NO.wrapItemAndSub = <li class="fourthlevel_no menu_label">|</li>
-		NO.ATagParams = class="btn btn-secondary btn-small"
-		NO.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		NO.wrapItemAndSub.insertData=1
-		
-		CUR.wrapItemAndSub = <li class="fourthlevel_cur menu_label">|</li>
-		CUR.ATagParams = class="btn btn-primary btn-small"
-		CUR.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		CUR.wrapItemAndSub.insertData=1
-		
-		ACT.wrapItemAndSub = <li class="fourthlevel_act menu_label">|</li>
-    		ACT.ATagParams = class="btn btn-secondary btn-small"
-		ACT.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		ACT.wrapItemAndSub.insertData=1
-		
-    		# NO + Uebersetzung nicht vorhanden
-		USERDEF1 < .NO
-		# ACT + Uebersetzung nicht vorhanden
-		USERDEF2 < .ACT
-  	}
-
-
-	4 < .1
-	4 {
-		wrap = <ul class="navlevel_5">|</ul>
-		
-		NO.wrapItemAndSub = <li class="fifthlevel_no menu_label">|</li>
-		NO.ATagParams = class="btn btn-secondary btn-small"
-		NO.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		NO.wrapItemAndSub.insertData=1
-		
-		CUR.wrapItemAndSub = <li class="fifthlevel_cur menu_label">|</li>
-		CUR.ATagParams = class="btn btn-primary btn-small"
-		CUR.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		CUR.wrapItemAndSub.insertData=1
-		
-		ACT.wrapItemAndSub = <li class="fifthlevel_act menu_label">|</li>
-    		ACT.ATagParams = class="btn btn-secondary btn-small"
-		ACT.stdWrap.innerWrap(
-  			<span>|</span>
-		)
-		ACT.wrapItemAndSub.insertData=1
-		
-    		# NO + Uebersetzung nicht vorhanden
-		USERDEF1 < .NO
-		# ACT + Uebersetzung nicht vorhanden
-		USERDEF2 < .ACT
-  	}
-
-
+	3 < .2
+	4 < .3
 }
 
 
@@ -207,7 +148,6 @@ lib.nav_secondlevel {
 #############################
 ###   SET COLLAPSE MENU  ###
 ###-----------------------###
-
 lib.collapsible_nav = HMENU
 lib.collapsible_nav {
 	if.isTrue = {$aomame.page.nav.collapse.active}
@@ -493,45 +433,67 @@ lib.superfish_nav {
 #######################################################################
 ###  Bootstrap Nav. with Logo | Collapsed: Bootstrap Collapse Menu  ###
 ###-----------------------------------------------------------------###
-lib.bootstrap_nav_with_logo = COA
-lib.bootstrap_nav_with_logo {
+lib.bootstrap_nav_with_logo_obsolete = COA
+lib.bootstrap_nav_with_logo_obsolete {
 	10 = COA
 	10 {
-		10 = COA
 		10 < lib.nav_collapse
-		20 = COA
+		10.if.isTrue = {$aomame.page.nav.firstlevel.collapsible}
 		20 < lib.logo
-		30= COA
 		30 < lib.nav_firstlevel
 	}
 }
-
-
 [globalVar = LIT:1 = {$aomame.page.nav.firstlevel.navbar_fixed_top}]
 lib.bootstrap_nav_with_logo.10.wrap = <div class="navbar navbar-fixed-top"><div class="navbar-inner">|</div></div>
 [else]
 lib.bootstrap_nav_with_logo.10.wrap = <div class="navbar"><div class="navbar-inner">|</div></div>
 [global]
 
+
+#######################################################################
+###  Bootstrap Nav. with Logo | Collapsed: Bootstrap Collapse Menu  ###
+###-----------------------------------------------------------------###
+lib.bootstrap_nav_with_logo = COA
+lib.bootstrap_nav_with_logo {
+	
+	10 < lib.logo
+	
+	20 < lib.nav_collapse
+	20.if.isTrue = {$aomame.page.nav.firstlevel.collapsible}
+	
+	30 < lib.nav_firstlevel
+	
+	wrap = <div class="content">|</div>
+}
+
 ################################################################################
 ###   Superfish Nav. with Logo | Collapsed: Dropdown Nav. | Mobile Dropdown  ###
 ###--------------------------------------------------------------------------###
 lib.superfish_nav_with_logo = COA
 lib.superfish_nav_with_logo {
+	
 	10 < lib.logo
-	10.wrap = <div class="span4">|</div>
+	10.wrap = <div class="{$aomame.page.header.logo.size}">|</div>
+	
 	20 = COA
 	20 {
 		1 < lib.mobile_nav
 		2 < lib.superfish_nav
-		wrap = <div class="span8">|</div>
+		wrap = <div class="{$aomame.page.nav.firstlevel.size}">|</div>
 	}
+	
+	wrap = <div class="content">|</div>
+	
 }
 
 
 
 
-# choose the navigation that is set in the aomame config file
+
+
+################################################################################
+###   choose the navigation that is set in the aomame config file            ###
+###--------------------------------------------------------------------------###
 lib.main_navigation = COA
 lib.main_navigation {
 	
@@ -570,10 +532,10 @@ lib.main_navigation {
 		value = 5
 		equals = {$aomame.page.nav.firstlevel.type}
 	}
+		
+	wrap = <header class="nav_grid navbar"><div class="{$aomame.page.settings.layout.container}"><div class="{$aomame.page.settings.layout.row}">|</div></div></header>
+	wrap.override = <div class="nav_grid navbar"><div class="{$aomame.page.settings.layout.container}"><div class="{$aomame.page.settings.layout.row}">|</div></div></div>
+	wrap.override.if {
+		isFalse = {$aomame.page.nav.firstlevel.wrap_as_header}
+	}
 }
-
-[globalVar = LIT:1 = {$aomame.page.nav.firstlevel.wrap_as_header}]
-lib.main_navigation.wrap = <header class="nav_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></div></header>
-[else]
-lib.main_navigation.wrap = <div class="nav_grid"><div class="container"><div class="{$aomame.page.layout.bootstrap.class.rows}">|</div></div></div>
-[global]
