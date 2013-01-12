@@ -1,13 +1,52 @@
 aomame_lib
 ==========
 
-TYPO3 all in one Template with Bootstrap;
-TypoScript Library, CSS, LESS, jQuery, Templates, Images
+TYPO3 all in one template with Bootstrap;
+Manage TypoScript Library, CSS, LESS, jQuery, Templates and Images
 
 
-Install Guide (only available in german yet)
+1. Features
+2. Installation guide (only in german)
+3. Tutorials (only in german)
 
-Grundinstallation:
+
+
+
+Features:
+---------
+	- One "main configuration file" to set all configs and components
+	- Complete TYPO3 Configuration
+	- TypoScript built for the (Twitter) "Bootstrap framework"
+	- Responsive components
+		- Navs: 
+			- Breadcrumb
+			- Firstlevel navs (choose superfish or bootstrap)
+			- Secondlevel nav
+			- Mobile nav
+		- Fancyheader
+		- Header
+		- Content
+		- Lightbox
+		- Printview
+		- Logo
+		- Searchform
+		- Footer
+			- Mainfooter
+			- Subfooter
+			- Mobile Footer
+	- Language settings
+	- TS, JS, CSS, LESS File management
+	- TS store for short access typoscripts
+	- Pre-configured extensions
+	- Pre-configured Backenlayouts and Gridelements
+	- Flexible to integrate any TS and Plugins
+
+
+
+
+
+
+Installation guide: (only available in german yet)
 ------------------
 1. Verzeichnis "00_global_source" und "aomame_prime" in einen Order "template" (oder ähnlich) ins TYPO3 Verzeichnis fileadmin/[template]/ -oder ein anderes beliebiges Verzeichnis- kopieren.
 
@@ -118,10 +157,10 @@ Template/Konfiguration anpassen
 
 
 
-Anpassungen:
+Tutorials:
 ---------------
 
-Footer:
+Set the footer:
 
 1. System Ordner "Footer" erstellen und eine Seite "Footer" darin anlegen.
 2. Mit der Extension Gridelement ein Layout für den Footer erstellen (oder eines der bereits vorhandenen Footer Layouts verwenden).
