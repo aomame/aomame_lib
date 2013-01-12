@@ -1,9 +1,25 @@
-##################
-# AOMAME CONFIG  #
-##################
+#---------------------------------------------------------------------
+#
+# (c) 2012 Patrick crausaz <support@aomame.ch>
+# 
+#  This script is part of the Aomame template library, which is 
+#  free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  The GNU General Public License can be found at
+#  http://www.gnu.org/copyleft/gpl.html.
+#
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+# 
+#  AOMAME MAIN CONFIG
+#
+#---------------------------------------------------------------------
 
 aomame {
-	
 	path {
 		global = typo3conf/ext/aomame/template/00_global_source/
 		local = typo3conf/ext/aomame/template/aomame_prime/
@@ -16,12 +32,20 @@ aomame {
 		settings {
 			site_name = Aomame Designs
 			rootpage_uid = 27
-			block_design = 1
+			layout {
+				responsive = 1
+				style = prime
+				block_design = 1
+				container = container
+				row = row-fluid
+				#options: center, pull-left, pull-right
+				direction = center
+			}
 		}
 		
 		
 		# layout will be removed : value "rows" comes to settings
-		layout.bootstrap.class.rows = row-fluid
+		#layout.bootstrap.class.rows = row-fluid
 		
 		
 		
@@ -38,6 +62,7 @@ aomame {
 				logo {
 					filename = logo/aomame_prime.png
 					altText = Aomame Prime
+					size = span4
 				}
 				
 				fancyheader {
@@ -57,11 +82,17 @@ aomame {
 		###############
 		nav {
 			firstlevel {
-				#1=firstlevel nav (default) : 2=Bootstrap collapse : 3=Superfish nav : 4=Bootstrap nav with logo : 5=Superfish nav with logo
-				type = 5
+				active = 1
+				# 1= Firstlevel Nav (default) 
+				# 2= Bootstrap collapse 
+				# 3= Superfish nav 
+				# 4= Bootstrap nav with logo 
+				# 5= Superfish nav with logo 
+				type = 4
+				size = span8
 				visibility = visible-desktop
 				direction = pull-right
-				collapsible = 0
+				collapsible = 1
 				wrap_as_header = 1
 				navbar_fixed_top = 0
 				search {
@@ -74,6 +105,10 @@ aomame {
 				enrty_level = 1
 				visibility = visible-desktop
 				direction = 
+				icon {
+					active = 1
+					name = icon-chevron-right
+				}
 			}
 			
 			collapse {
@@ -103,6 +138,7 @@ aomame {
 		# CONTENT #
 		###########
 		content {
+			active = 1
 			columns {
 				1_col {
 					middle = span12
@@ -140,6 +176,7 @@ aomame {
 				pid = 42
 				colPos = 0
 				visibility = hidden-phone
+				add_printlink = 0
 			}
 			
 			mobile_footer {
@@ -155,6 +192,7 @@ aomame {
 				pid = 42
 				colPos = 1
 				visibility = all
+				add_printlink = 1
 			}
 			
 			
@@ -168,8 +206,7 @@ aomame {
 	head {
 		title = Aomame Prime
 		
-		#baseURL = http://prime.aomame.ch/
-		baseURL = http://localhost/workspace/t3_v47/
+		baseURL = http://localhost/projects/prime/
 		
 		charset = utf-8
 				
@@ -178,6 +215,13 @@ aomame {
 		jquery_on_top = 1
 		
 		less_version = 1.3.1
+		
+		favicon {
+			active = 1
+			
+			#file to {local}/main_template/img/
+			file = favicon.jpg
+		}
 	}
 
 	
@@ -187,10 +231,46 @@ aomame {
 	ext {
 		
 		#language menu
-		language {			
-			default_language = de
-			htmlTag_langKey = de
-			locale_all = de_DE.UTF-8
+		language {
+			nav {
+				active = 0
+				order = 1,0,2
+			}
+			default {
+				label = Deutsch
+				id = 0
+				language = de
+				key = de-DE
+				locale_all = de_DE.UTF-8
+			}
+			0 {
+				label = Deutsch
+				id = 0
+				language = de
+				key = de-DE
+				locale_all = de_DE.UTF-8
+			}
+			1 {
+				label = English
+				id = 1
+				language = en
+				key = en-GB
+				locale_all = en_GB.UTF-8 
+			}
+			2 {
+				label = France
+				id = 2
+				language = fr
+				key = fr-FR
+				locale_all = fr_FR.UTF-8 
+			}
+			3 {
+				label = Chinese
+				id = 3
+				language = cn
+				key = cn-CN
+				locale_all = cn_CN.UTF-8 
+			}
 		}
 		
 		# REAL URL
@@ -198,17 +278,53 @@ aomame {
 			realurl_enable = 1
 			simulateStaticDocument = 0
 		}
-				
-		# NEWS  
+			
+		# sr_feuser_register
+		user {
+			pid = 59
+			confirmed_user_group = 1
+			unconfirmed_user_group = 2
+			
+		}
+			
+		# NEWS
 		news {
 			news_sysfolder_pid = 43
 			default_single_view_pid = 34
 			default_detail_view_pid = 34
 			
 			social {
-				show_share_buttons = 0
+				show_share_buttons = 1
 			}
 		}
+		
+		# Search
+		search {
+			pid = 56
+			enable_indexing = 0
+			index_metatags = 1
+			index_externals = 1
+			
+			show {
+				always_show_page_links = 1
+				advanced_search_link = 1
+				result_number = 10
+			}
+			
+			
+			
+			searchform {
+				active = 1
+				
+				#select: nav | secondlevel_nav | header | breadcrumb | fancyheader
+				add_to = breadcrumb
+			}
+		}
+		
+		lightbox {
+			active = 1
+		}
+		
 	}
 	
 	
@@ -216,19 +332,42 @@ aomame {
 	# Special Option  #
 	###################
 	option {
-		#use TYPO3 debug mode for aomame plugin
-		debug {
-			
+		
+		administrator {
+			name = Aomame designs
+			email = support@aomame.ch
+		}
+		
+		copyright {
+			active = 1
+			by = Aomame designs
+			url = www.aomame.ch
+			hidden = 1
+			link_title = Webdesign by Aomame designs
+		}
+		
+		agb {
+			pid = 
 		}
 		
 		sys {
 			# User_TSconfig has to allow Admin Panel also
 			allow_admin_panel = 0
+			
+			##http://www.expertinnen-web.de/2006-160/typo3-seiten-mit-frontend-editing-pflegen/
+			## einrichten !!
+			editpanel {
+				active =  0
+				allow = edit,delete,hide,move,new,toolbar
+			}
 		}
 		
 		print {
-			use_print_page = 1
-			print_icon =   
+			active = 1
+			
+			type_num = 400
+			#{global}img/icons/
+			icon = print_icon.gif
 		}
 		
 		pdf {
@@ -236,6 +375,12 @@ aomame {
 			
 			#url ro pdf icon
 			#pdf_icon =
+		}
+		
+		statistics {
+			googleanalytics {
+				code = 
+			}
 		}
 	}
 }

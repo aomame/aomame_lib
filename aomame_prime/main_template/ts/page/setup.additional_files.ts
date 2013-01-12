@@ -1,38 +1,59 @@
-#JS Additional Files
+#---------------------------------------------------------------------
+#
+# (c) 2013 Patrick crausaz <support@aomame.ch>
+# 
+#  This script is part of the Aomame template library, which is 
+#  free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  The GNU General Public License can be found at
+#  http://www.gnu.org/copyleft/gpl.html.
+#
+#---------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------
+#
+#  This file supplements the {global}setup.file.ts
+#  You can add here any css, less, js ... files or 
+#  meta tags for local use
+#
+#---------------------------------------------------------------------
+
+
 page {
 
-  headerData {
-	
-	## Do not change the value 220
-	220 = TEXT
-	220.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global}bootstrap/less/responsive.less" />
+	headerData {
+		#-----------------------------------------------------------------
+		# 501 - 700 : space for additional local files
+		#-----------------------------------------------------------------
+		# Only add files within this range !
+		#-----------------------------------------------------------------
+		
+	}
 
-  	## Namespace for additional files: 501-700: Add only files in that range ##
-  	510 = TEXT
-  	510.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.global}css/nav/superfish/theme_2.less" />
-
-  }
-
-
-  includeJS {
-	
-  }
   
-  includeJSFooter {
-	#cookie = {$aomame.path.global}js/lib/jquery.cookie.js
-  	#analytics = {$aomame.path.local}main_template/js/analytics.js
-  	jquery_color = {$aomame.path.global}js/lib/jquery.color.js
-  	superfish = {$aomame.path.global}plugin/superfish/js/superfish.js
-  	script = {$aomame.path.local}main_template/js/script.js
-  	fancyheader = {$aomame.path.global}js/header/fancyheader.js
-  }
+	includeJS {
+		
+	}
   
-  includeCSS {
-	prime_style = {$aomame.path.local}main_template/css/style.css
-	fancyheader = {$aomame.path.global}css/header/fancyheader.css
-	header = {$aomame.path.global}css/header/theme_prime.css
-	content = {$aomame.path.global}css/content/theme_prime.css
-	footer = {$aomame.path.global}css/footer/theme_prime.css
-  }
+  	includeJSFooterlibs {
+		
+	}
+  
+	includeJSFooter {
+		#cookie = {$aomame.path.global}js/lib/jquery.cookie.js
+		#analytics = {$aomame.path.local}main_template/js/analytics.js
+		jquery_color = {$aomame.path.global}js/lib/jquery.color.js
+  		superfish = {$aomame.path.global}plugin/superfish/js/superfish.js
+		fancyheader = {$aomame.path.global}js/header/fancyheader.js
+		script = {$aomame.path.local}main_template/js/script.js
+	}
+  
+	includeCSS {
+		prime_style = {$aomame.path.local}main_template/css/style.css
+		fancyheader = {$aomame.path.global}css/header/fancyheader.css
+	}
 }
-

@@ -1,4 +1,5 @@
 tx_news.templateLayouts {
-    home_teaser = Homepage News Teaser
-    side_teaser = Sideteaser List News
+		default = Default
+        home_teaser = Home Teaser
+        fancyheader = Fancyheader List
 }

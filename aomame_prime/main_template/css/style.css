@@ -34,8 +34,15 @@ h4 {
 	font-weight: normal !important;
 }
 
-/*phone only*/
+
+
+/* Responsive */
+/**************/
 @media (max-width: 767px) {
+	
+	.navbar .container {
+    	width: 100% !important;
+	}
 	
 	.content {
 		padding: 0 20px;
@@ -44,11 +51,33 @@ h4 {
 	footer section {
 		padding: 5px 20px 5px;
 	}
+	
+	section.fancyheader_grid .container .afh {
+		padding: 20px !important;
+	}
+	section.fancyheader_grid .container .afh.first {
+		padding: 0 !important;
+		display: block !important;
+	}
+	
+	section.fancyheader_grid .container .row-fluid .span2 {
+		width: 100% !important;
+	}
 }
 
-/*fancyheader*/
+@media (max-width: 1199px) {
+	section.fancyheader_grid .container .afh.first {
+		display: none;
+	}
+	
+	section.fancyheader_grid .container .row-fluid .span2 {
+		width: 22%;
+	}
+	
+}
 
-
+/* Fancyheader */
+/***************/
 section.fancyheader_grid .fh_tab p {
 	font-weight: bold;
 	padding: 9px 40px;
@@ -65,7 +94,7 @@ section.fancyheader_grid .container .afh {
 	border-right: 1px solid #EEEEEE;
 	padding: 20px 15px 20px 0;
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 section.fancyheader_grid .container .afh.last,
 section.fancyheader_grid .container .afh.first {
@@ -81,6 +110,8 @@ section.fancyheader_grid .container .afh.first div {
 /*end*/
 
 
+
+
 .four_column_grid {
 	margin-top: 20px;
 }
@@ -91,7 +122,10 @@ section.fancyheader_grid .container .afh.first div {
 }
 
 
+
+
 /*  Breadcrumb  */
+/*****************/
 .breadcrumb h1 {
     color: #292929;
     font-size: 24px;
@@ -112,4 +146,29 @@ section.fancyheader_grid .container .afh.first div {
 
 .breadcrumb form {
 	margin: 15px 20px 0 0;
+}
+
+
+/* felogin */
+.felogin input {
+	width: 100%;
+}
+
+
+
+/* Printlink */
+
+.subfooter_grid {
+	position: relative;
+}
+
+.printlink {
+	position: absolute;
+	right: 25px;
+	top: 20px;
+}
+
+.printlink img {
+    height: auto;
+    width: 25px;
 }

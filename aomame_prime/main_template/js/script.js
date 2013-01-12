@@ -15,15 +15,48 @@ $("document").ready(function(){
 		    //onShow:        function(){},       // callback function fires once reveal animation completed – 'this' is the opened ul 
 		    //onHide:        function(){}        // callback function fires after a sub-menu has closed – 'this' is the ul that just closed 		
 	}); 
+
 	
+	
+	//show fancyheader if one of those cases is true
+	if(getURLParam("ofh")){	
+		openFancyHeader();
+		$('section.fancyheader_grid .fh_tab').addClass('open');
+	}
+	
+	//Fancyheader & Login Handling
+	var open_param = '&ofh=1';
+	
+	//add parameter to links
+	href = $('.addofhparam a').attr('href');
+	$('.addofhparam:first-child').attr('href', href+open_param);
+	
+	//add parameter to forms
+	action = $('.felogin form').attr('action');
+	$('.felogin form').attr('action', action+open_param)
+
 });
 
 
 
 
 
-function getURLParam(name){
-    return decodeURI(
-        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
-    );
+
+
+
+function openFancyHeader(){
+	$('section.fancyheader_grid .container').show();
+}
+
+function getURLParam(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    }
 }
