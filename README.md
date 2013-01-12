@@ -7,7 +7,8 @@ Manage TypoScript Library, CSS, LESS, jQuery, Templates and Images
 
 1. Features
 2. Installation guide (only in german)
-3. Tutorials (only in german)
+3. Set Template and Configuration (only in german)
+4. Tutorials (only in german)
 
 
 
@@ -47,7 +48,7 @@ Features:
 
 
 Installation guide: (only available in german yet)
-------------------
+---------------------------------------------------
 1. Verzeichnis "00_global_source" und "aomame_prime" in einen Order "template" (oder ähnlich) ins TYPO3 Verzeichnis fileadmin/[template]/ -oder ein anderes beliebiges Verzeichnis- kopieren.
 
 2. Seitenbaum in TYPO3 anlegen
@@ -122,8 +123,8 @@ Installation guide: (only available in german yet)
 
 
 
-Template/Konfiguration anpassen
---------------------------------
+Set Template and Configuration (only in german)
+-----------------------------------------------
 
 1. Backendlayouts erstellen:
 	- Im erstellten SysOrdner "Layouts" können weitere Backendlayouts erstellt werden.
@@ -158,7 +159,7 @@ Template/Konfiguration anpassen
 
 
 Tutorials:
----------------
+------------
 
 Set the footer:
 
