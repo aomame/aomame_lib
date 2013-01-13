@@ -104,8 +104,7 @@ print.10 {
 		wrap = <div class="pih_data page_title">|</div>
 	}
 	
-	40 = TEXT
-	40.wrap = <div class="clear">|</div>
+	40 < lib.store.clear
 	
 	50 < lib.store.divider
 	
@@ -124,6 +123,7 @@ print.20 < lib.content_layout
 print.30 < lib.mainfooter
 
 print.40 < lib.store.divider
+print.40.stdWrap.outerWrap = <div class="last_divider">|</div>
 
 print.50 = TEXT
 print.50.value = <div class="linkcontainer"><div class="lc_header"><h1>Links</h1></div><ol class="content_links"></ol></div>

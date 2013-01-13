@@ -43,26 +43,11 @@ h4 {
 }
 
 
-
 /* LAYOUT:  single col with nav */
 /********************************/
-.layout_single_col_nav .col_middle {
+.content {
+	padding: 0 20px;
 	width: 90%;
-	padding: 0 20px;
-}
-
-/* LAYOUT:  double col with nav */
-/********************************/
-.layout_double_col_nav .col_left {
-	float: left;
-	width: 45%;
-	padding: 0 20px;
-}
-
-.layout_double_col_nav .col_right {
-	float: left;
-	width: 45%;
-	padding: 0 20px;
 }
 
 
@@ -77,7 +62,8 @@ h4 {
 /**********/
 
 footer {
-	padding: 20px 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
 div[class*="foo"] h1,
@@ -89,6 +75,7 @@ div[class*="foo"] h6 {
 	font-weight: bold;
 	font-size: 16px;
 }
+
 div[class*="foo"] {
 	float: left;
 	width: 25%;
@@ -103,6 +90,9 @@ footer li {
 	list-style: none outside none;
 }
 
+.last_divider {
+	padding: 0 20px;
+}
 
 /* LINK Container */
 /******************/

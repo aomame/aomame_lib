@@ -4,6 +4,12 @@
 #			    			#
 #############################
 
+
+# GLOBAL: page/ : short access TS
+#==================================
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.store.ts">
+
+
 ## EXTERNAL: typo3conf/ext/
 #==================================
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/gridelements/static/gridelements/setup.txt">
@@ -27,7 +33,6 @@
 
 # GLOBAL: page/
 #==================================
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.store.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.files.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.lightbox.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.language.ts">

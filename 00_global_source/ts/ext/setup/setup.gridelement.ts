@@ -112,7 +112,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			4.wrap = <div class="foo foo_4">|</div>
 			# colPos ID
 			5 < .default
-			5.wrap = <div class="foo foo_5">|</div>
+			5.wrap = <div class="foo foo_5">|</div><div class="clear"></div>
 		}
 		wrap = <div class="footer_grid">|</div>
 	}
@@ -130,7 +130,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			1.wrap = <div class="dpb_left dpb span6">|</div>
 			# colPos ID
 			2 < .default
-			2.wrap = <div class="dpb_right dpb span6">|</div>
+			2.wrap = <div class="dpb_right dpb span6">|</div><div class="clear"></div>
 		}
 		wrap = <div class="dpb horicontal_grid">|</div>
 	}
@@ -152,7 +152,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			2.wrap = <div class="tpb_middle tpb span4">|</div>
 			# colPos ID
 			3 < .default
-			3.wrap = <div class="tpb_right tpb span4">|</div>
+			3.wrap = <div class="tpb_right tpb span4">|</div><div class="clear"></div>
 		}
 		wrap = <div class="tpb horicontal_grid">|</div>
 	}
@@ -171,7 +171,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			3 < .default
 			3.wrap = <div class="fcg fcg_3 span3">|</div>
 			4 < .default
-			4.wrap = <div class="fcg fcg_4 span3">|</div>
+			4.wrap = <div class="fcg fcg_4 span3">|</div><div class="clear"></div>
 		}
 		wrap = <div class="four_column_grid">|</div>
 	}
@@ -186,7 +186,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			1 < .default
 			1.wrap = <div class="tcs tcs_left span8">|</div>
 			2 < .default
-			2.wrap = <div class="tcs tcs_right span4">|</div>
+			2.wrap = <div class="tcs tcs_right span4">|</div><div class="clear"></div>
 		}
 		wrap = <div class="two_col_sized">|</div>
 	}
@@ -201,7 +201,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			1 < .default
 			1.wrap = <div class="tcs tcs_left span4">|</div>
 			2 < .default
-			2.wrap = <div class="tcs tcs_right span8">|</div>
+			2.wrap = <div class="tcs tcs_right span8">|</div><div class="clear"></div>
 		}
 		wrap = <div class="two_col_sized">|</div>
 	}
@@ -251,7 +251,7 @@ tt_content.gridelements_pi1.20.10.setup {
 			4.wrap = <div class="afh span2">|</div>
 			# colPos ID
 			5 < .default
-			5.wrap = <div class="afh span2 last">|</div>
+			5.wrap = <div class="afh span2 last">|</div><div class="clear"></div>
 		}
 	}
 }

@@ -59,17 +59,9 @@ lib.store {
 	}
 	
 	
-25 = TEXT
-25 {
-	value=INFO
-	typolink{
-		parameter.field=header_link
-  		parameter.wrap=|,1 516x450:menubar=0 title2
-   		
-  		no_cache=1
-  		JSwindow_params=menubar=0,scrollbars=1,resizable=0,location=0,toolbar=0
-	}
-}
+	## Cleardiv
+	clear = TEXT
+	clear.value = <div class="clear"></div>
 	
 	
 	

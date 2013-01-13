@@ -29,6 +29,7 @@ lib.content_layout {
 	 		#10 < lib.content_middle
 	 		10 < styles.content.getRight
 	 		10.wrap = <div class="{$aomame.page.content.columns.1_col.middle} col_middle">|</div>
+	 		20 < lib.store.clear
 	 	}
 	 
 		 #single col layout
@@ -37,6 +38,7 @@ lib.content_layout {
 		 	#10 < lib.content_middle
 		 	10 < styles.content.getRight
 		 	10.wrap = <div class="{$aomame.page.content.columns.1_col.middle} col_middle">|</div>
+		 	20 < lib.store.clear
 		 }
 	 
 		 #doble col layout
@@ -47,6 +49,7 @@ lib.content_layout {
 		 	10.wrap = <div class="{$aomame.page.content.columns.2_col.left} col_left">|</div>
 		 	20 < lib.content_right
 		 	20.wrap = <div class="{$aomame.page.content.columns.2_col.right} col_right">|</div>
+		 	30 < lib.store.clear
 		 }
 		 
 		 #tripple col layout
@@ -58,6 +61,7 @@ lib.content_layout {
 		 	20.wrap = <div class="{$aomame.page.content.columns.3_col.middle} col_middle">|</div>
 		 	30 < lib.content_right
 		 	30.wrap = <div class="{$aomame.page.content.columns.3_col.right} col_right">|</div>
+		 	40 < lib.store.clear
 		 }
 		 
 		 #single col with nav
@@ -67,6 +71,7 @@ lib.content_layout {
 		 	10.wrap = <div class="{$aomame.page.content.columns.1_col_nav.nav} col_nav">|</div>
 		 	20 < lib.content_middle
 		 	20.wrap = <div class="{$aomame.page.content.columns.1_col_nav.middle} col_middle">|</div>
+		 	30 < lib.store.clear
 		 }
 		 
 		 #double col with nav
@@ -78,6 +83,7 @@ lib.content_layout {
 		 	20.wrap = <div class="{$aomame.page.content.columns.2_col_nav.left} col_left">|</div>
 		 	30 < lib.content_right
 		 	30.wrap = <div class="{$aomame.page.content.columns.2_col_nav.right} col_right">|</div>
+		 	40 < lib.store.clear
 		 }
 		 
 		 #without header
