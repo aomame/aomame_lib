@@ -9,23 +9,46 @@
 			<div class="news-list-view">
 				<f:if condition="{settings.hidePagination}">
 					<f:then>
-					
+						
+						
+						<!-- Home list view -->
 						<f:if condition="{0:settings.templateLayout} == {0:'home_teaser'}">
 							<f:then>
-								<f:for each="{news}" as="newsItem">
-									<f:render partial="List/HomeTeaser" arguments="{newsItem: newsItem, settings:settings}" />
-								</f:for>
+								<div class="news-home-teaser">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/HomeTeaser" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+									<div class="clear"></div>
+								</div>
 							</f:then>
 						</f:if>
 						
+						
+						<!-- Fancyheader Listview -->
 						<f:if condition="{0:settings.templateLayout} == {0:'fancyheader'}">
 							<f:then>
-								<f:for each="{news}" as="newsItem">
-									<f:render partial="List/FancyheaderList" arguments="{newsItem: newsItem, settings:settings}" />
-								</f:for>
+								<ul class="news-teaser-list">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/FancyheaderList" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+								</ul>
 							</f:then>
 						</f:if>
 						
+						
+						<!-- Footer List -->
+						<f:if condition="{0:settings.templateLayout} == {0:'footer_list'}">
+							<f:then>
+								<ul class="news-teaser-list">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/FancyheaderList" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+								</ul>
+							</f:then>
+						</f:if>
+						
+						
+						<!-- default -->
 						<f:if condition="{0:settings.templateLayout} == {0:'default'}">
 							<f:then>
 								<f:for each="{news}" as="newsItem">

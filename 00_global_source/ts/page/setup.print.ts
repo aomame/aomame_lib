@@ -97,8 +97,8 @@ print.10 {
 	30 {
 		typolink {
 			parameter < lib.store.uid
-			additionalParams = &type=0
-			additionalParams.insertData = 1
+			#additionalParams = &type=0
+			#additionalParams.insertData = 1
 			#returnLast = url
 		}
 		wrap = <div class="pih_data page_title">|</div>
@@ -116,6 +116,11 @@ print.10 {
 #---------------------------------------------------------------------
 #  Build Content
 #---------------------------------------------------------------------
+
+#do not render showbiz plugin on print page
+[globalVar = GP:type = {$aomame.option.print.type_num}]
+	plugin.tx_aomameshowbiz_pi1 >
+[global]
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.content.ts">
 print.20 < lib.content_layout
 
@@ -135,7 +140,8 @@ print.50.value = <div class="linkcontainer"><div class="lc_header"><h1>Links</h1
 #---------------------------------------------------------------------
 print {	 
 	includeCSS {
-		print = {$aomame.path.global}css/print/print.css
+		global_print = {$aomame.path.global}css/print/print.css
+		local_print = {$aomame.path.local}main_template/css/print.css
 	}
 	
 	includeJSFooterlibs {

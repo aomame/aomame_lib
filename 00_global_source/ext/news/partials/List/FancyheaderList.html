@@ -3,15 +3,9 @@
 	=====================
 		Partials/List/FancyheaderList.html
 -->
-<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
-
-	<!-- header -->
-	<div class="header">
-		<h3>
-			<n:link newsItem="{newsItem}" settings="{settings}">
-				{newsItem.title}
-			</n:link>
-		</h3>
-	</div>
-		
-</div>
+	<!-- teaser item -->
+	<li class="articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+		<n:link newsItem="{newsItem}" settings="{settings}">
+			{newsItem.title}
+		</n:link>
+	</li>

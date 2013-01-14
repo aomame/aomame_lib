@@ -102,7 +102,7 @@ lib.nav_secondlevel {
 		    10 {
 				10 = TEXT
 				10 {
-					field = nav_title // title
+					field < lib.store.title
 					listNum = 0
 					listNum.splitChar = |
 				}

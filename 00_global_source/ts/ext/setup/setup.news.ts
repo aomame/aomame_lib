@@ -1,4 +1,3 @@
-
 # ==============================================
 # FE-Plugin configuration for EXT:news
 # ==============================================
@@ -38,9 +37,9 @@ plugin.tx_news {
 		}
 	}
 	view {
-		templateRootPath = {$plugin.tx_news.view.templateRootPath}
-		partialRootPath = {$plugin.tx_news.view.partialRootPath}
-		layoutRootPath = {$plugin.tx_news.view.layoutRootPath}
+		templateRootPath = {$aomame.path.global}ext/news/templates/
+		partialRootPath = {$aomame.path.global}ext/news/partials/
+		layoutRootPath = {$aomame.path.global}ext/news/layouts/
 	}
 	# Modify the translation
 	_LOCAL_LANG {
@@ -53,7 +52,7 @@ plugin.tx_news {
 	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
 	# ====================================
 	settings {
-		cssFile = {$plugin.tx_news.settings.cssFile}
+		cssFile = {$aomame.path.global}css/news/news-basic.css
 
 		#Displays a dummy image if the news have no media items
 		displayDummyIfNoMedia = 1

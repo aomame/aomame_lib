@@ -291,17 +291,17 @@ aomame {
 		news {
 			news_sysfolder_pid = 43
 			default_single_view_pid = 34
-			default_detail_view_pid = 34
+			default_detail_view_pid = 65
 			
 			social {
-				show_share_buttons = 1
+				show_share_buttons = 0
 			}
 		}
 		
 		# Search
 		search {
 			pid = 56
-			enable_indexing = 0
+			enable_indexing = 1
 			index_metatags = 1
 			index_externals = 1
 			
@@ -365,7 +365,7 @@ aomame {
 		print {
 			active = 1
 			
-			type_num = 400
+			type_num = 98
 			#{global}img/icons/
 			icon = print_icon.gif
 		}

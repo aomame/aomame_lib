@@ -24,21 +24,17 @@ page {
     # 1 - 100 : space for meta and browser settings and page title 
     #-----------------------------------------------------------
     
-  	10 = TEXT
-    10.value = <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    10.if.isTrue = {$aomame.page.settings.layout.responsive}
-	
-	
-	20 = COA
-	20 {
+  	10 = COA
+	10 {
 		10=TEXT
-		10.value = {$aomame.page.settings.site_name}
-		20 = HTML
-		20.value = &nbsp;:&nbsp;
-		30 < lib.store.title
+		10.value = {$aomame.page.settings.site_name}:&nbsp;
+		20 < lib.store.title
 		wrap = <title>|</title>
 	}
 	
+	20 = TEXT
+    20.value = <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    20.if.isTrue = {$aomame.page.settings.layout.responsive}
     
     49 = TEXT
 	49.value = <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->

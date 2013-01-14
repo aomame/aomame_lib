@@ -1,0 +1,39 @@
+
+/*******************************************
+
+Including Vars
+===============
+
+##  Default values  ##
+----------------------
+
+
+
+
+ - teaser list view -
+@newsTeaserListMargin: 						;
+@newsTeaserListLinkColor:					;
+@newsTeaserListLinkColorHover:				;
+@newsTeaserListItemPadding:					;
+@newsTeaserListItemBorderColor:				;
+
+********************************************/
+
+
+.news ul.news-teaser-list {
+	margin: @newsTeaserListMargin;
+}
+
+.news .news-teaser-list li {
+    border-bottom: 1px solid;
+    border-color: @newsTeaserListItemBorderColor;
+    list-style: none outside none;
+    padding: @newsTeaserListItemPadding;
+}
+
+.news .news-teaser-list li a {
+	color: @newsTeaserListLinkColor;
+	&:hover {
+		color: @newsTeaserListLinkColorHover;
+	}
+}
