@@ -25,49 +25,10 @@ print.typeNum = {$aomame.option.print.type_num}
 #---------------------------------------------------------------------
 #  Config
 #---------------------------------------------------------------------
-config {
-	index_enable = 0
+print.config {
 	spamProtectEmailAddresses = 0
 	admPanel = 0
 	
-	#charset
-	metaCharset = {$aomame.head.charset}
-	additionalHeaders = Content-Type:text/html;charset={$aomame.head.charset}
-	
-	doctype = <!DOCTYPE html>
-	
-	#realURL
-	simulateStaticDocuments = {$aomame.ext.realurl.simulateStaticDocument}
-	baseURL = {$aomame.head.baseURL}
-	tx_realurl_enable = {$aomame.ext.realurl.realurl_enable}
-	prefixLocalAnchors = all
-	
-	#cache settings
-	cache_period = 604800
-	cache = 1
-	no_cache = 0
-	
-	#performance
-	compressJs = 1
-	inlineStyle2TempFile = 1
-	compressCss = 1
-	
-	# do not render title tag to head
-	noPageTitle = 0
-	
-	#no borders attribut in img tags - alerts warnings in html5 doctypes
-	disableImgBorderAttr = 1
-	
-	headerComment (
-		# > Webdesign by Aomame designs : www.aomame.ch #
-	)
-	
-}
-
-#language
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.language.ts">	
-
-print.config {
 	index_enable = 0
 	index_externals = 0
 }
@@ -76,16 +37,13 @@ print.config {
 #---------------------------------------------------------------------
 #  Build Body Tag
 #---------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.body_tag.ts">
-lib.body_tag.30.value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="javascript:window.print()">
-print.bodyTagCObject < lib.body_tag
+print.bodyTagCObject < lib.body_tag.print
 
 
 
 #---------------------------------------------------------------------
 #  Print Info Header
 #---------------------------------------------------------------------
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.store.ts">
 print.10 = COA
 print.10 {
 	10 < lib.store.divider
@@ -118,13 +76,12 @@ print.10 {
 #---------------------------------------------------------------------
 
 #do not render showbiz plugin on print page
-[globalVar = GP:type = {$aomame.option.print.type_num}]
+[globalVar = TSFE:type = {$aomame.option.print.type_num}]
 	plugin.tx_aomameshowbiz_pi1 >
 [global]
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.content.ts">
+
 print.20 < lib.content_layout
 
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/00_global_source/ts/page/setup.footer.ts">
 print.30 < lib.mainfooter
 
 print.40 < lib.store.divider
@@ -141,7 +98,7 @@ print.50.value = <div class="linkcontainer"><div class="lc_header"><h1>Links</h1
 print {	 
 	includeCSS {
 		global_print = {$aomame.path.global}css/print/print.css
-		local_print = {$aomame.path.local}main_template/css/print.css
+		local_print = {$aomame.path.local}css/print.css
 	}
 	
 	includeJSFooterlibs {

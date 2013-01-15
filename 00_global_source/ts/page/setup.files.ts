@@ -44,7 +44,7 @@ page {
 	
 	
 	60 = TEXT
-	60.value = <link type="image/x-icon" href="{$aomame.path.local}main_template/img/{$aomame.head.favicon.file}" rel="icon">
+	60.value = <link type="image/x-icon" href="{$aomame.path.local}img/{$aomame.head.favicon.file}" rel="icon">
 	60.if.isTrue = {$aomame.head.favicon.active}
 	
 	
@@ -53,9 +53,9 @@ page {
     #-----------------------------------------------------------
     # Include Bootstrap Framework
   	110 = TEXT
-  	110.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}main_template/less/bootstrap.less" />
+  	110.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}less/bootstrap.less" />
 	111 = TEXT
-	111.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}main_template/less/responsive.less" />
+	111.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}less/responsive.less" />
 	111.if.isTrue = {$aomame.page.settings.layout.responsive}
 	
 	
@@ -70,7 +70,7 @@ page {
 	}
 	
 	220 = TEXT
-	220.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}main_template/less/theme.less" />
+	220.value = <link rel="stylesheet/less" type="text/css" href="{$aomame.path.local}less/theme.less" />
 	
 	
 	#-----------------------------------------------------------
@@ -104,7 +104,7 @@ page {
   	fancybox = {$aomame.path.global}js/plugin/jquery.fancybox.js
 	fancybox.if.isTrue = {$aomame.ext.lightbox.active}
 	
-	fancybox_settings = {$aomame.path.local}main_template/js/lightbox.js
+	fancybox_settings = {$aomame.path.local}js/lightbox.js
 	fancybox_settings.if.isTrue = {$aomame.ext.lightbox.active}
   }
   

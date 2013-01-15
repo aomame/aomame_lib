@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame/template/aomame_mobile/main_template/ts/constance.include.ts">
