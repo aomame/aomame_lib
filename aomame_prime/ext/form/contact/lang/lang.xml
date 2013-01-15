@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for Contact Form</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="label_fieldset">Contact</label>
+			<label index="name">Name:</label>
+			<label index="email">E-Mail:</label>
+			<label index="website">Webseite:</label>
+			<label index="message">Your Message:</label>
+			<label index="contact-type">Preferred language:</label>
+			<label index="contact-type.german">German</label>
+			<label index="contact-type.english">English</label>
+			<label index="interests">My interests:</label>
+			<label index="interests.website">TYPO3 Website</label>
+			<label index="interests.webshop">Magento Webshop</label>
+			<label index="interests.hosting">Hosting</label>
+			<label index="interests.wordpress">Wordpress</label>
+			<label index="interests.mobile">Mobile Page</label>v
+			<label index="interests.extension">Extension</label>
+			<label index="interests.support">Support</label>
+			<label index="interests.seo">SEO Package</label>
+			<label index="interests.domain">Domain Reservation</label>
+			<label index="interests.others">Others</label>
+			<label index="receive-copy">I want to receive a copy of this request</label>
+			<label index="submit">Send</label>
+	
+			<label index="greetings">Dear</label>
+			<label index="email_user_subject">Your contact request</label>
+			<label index="email_user_text">We have received your request via the contact form on www.example.org. We will process your request and get in contact with you soon.</label>
+			<label index="email_user_footer">---------------------------------- This message was created automatically. --------------------------------</label>
+
+			<label index="email_admin_subject">Contact request</label>
+			<label index="email_admin_text">A user filled out the contact form on www.example.org.</label>
+			<label index="email_admin_footer">---------------------------------- This message was created automatically. --------------------------------</label>
+
+			<label index="error_name_required">Please enter your name!</label>
+			<label index="error_email_required">Please enter your email address!</label>
+			<label index="error_email_email">Please enter a valid email address!</label>
+			<label index="error_message_required">Please enter a message!</label>
+		</languageKey>
+
+		<languageKey index="de" type="array">
+			<label index="label_fieldset">Kontakt</label>
+			<label index="name">Name:</label>
+			<label index="email">E-Mail:</label>
+			<label index="website">Website:</label>
+			<label index="message">Nachricht:</label>
+			<label index="contact-type">Bevorzugte Sprache:</label>
+			<label index="contact-type.german">Deutsch</label>
+			<label index="contact-type.english">English</label>
+			<label index="interests">Mein Interesse:</label>
+			<label index="interests.website">TYPO3 Website</label>
+			<label index="interests.webshop">Magento Webshop</label>
+			<label index="interests.hosting">Hosting</label>
+			<label index="interests.wordpress">Wordpress</label>
+			<label index="interests.mobile">Mobile Webseite</label>v
+			<label index="interests.extension">TYPO3 Erweiterung</label>
+			<label index="interests.support">Support</label>
+			<label index="interests.seo">SEO Package</label>
+			<label index="interests.domain">Domain Registration</label>
+			<label index="interests.others">Anderes</label>
+			<label index="receive-copy"><![CDATA[Ich m&ouml;chte eine Kopie dieser Nachricht erhalten.]]></label>
+			<label index="submit">Absenden</label>
+	
+			<label index="greetings">Guten Tag</label>
+			<label index="email_user_subject">Ihre Kontaktanfrage</label>
+			<label index="email_user_text"><![CDATA[Wir haben Ihre Anfrage via Kontaktformular auf www.aomame.ch erhalten und werden Ihr Anliegen in K&uuml;rze bearbeiten.]]></label>
+			<label index="email_user_footer">---------------------------------- Diese Nachricht wurde automatisch generiert. --------------------------------</label>
+
+			<label index="email_admin_subject">Contact request</label>
+			<label index="email_admin_text">A user filled out the contact form on www.aomame.ch</label>
+			<label index="email_admin_footer">---------------------------------- This message was created automatically. --------------------------------</label>
+
+			<label index="error_name_required">Bitte geben Sie Ihren Namen an!</label>
+			<label index="error_email_required">Bitte geben Sie eine E-Mail Adresse an!</label>
+			<label index="error_email_email"><![CDATA[Bitte geben Sie eine g&uuml;ltige E-Mail Adresse an!]]></label>
+			<label index="error_message_required">Beschreiben Sie bitte Ihr Anliegen!</label>
+		</languageKey>
+
+	</data>
+</T3locallang>
