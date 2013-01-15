@@ -101,6 +101,3 @@ lib.content_layout {
     	
     wrap = <section class="content_grid"><div class="{$aomame.page.settings.layout.container}"><div class="{$aomame.page.settings.layout.row}"><div class="content">|</div></div></div></section>
 }
-
-# override default value for content elements of css-styled-content
-tt_content.stdWrap.innerWrap.cObject.default.20.10.value = {$aomame.page.settings.layout.row}

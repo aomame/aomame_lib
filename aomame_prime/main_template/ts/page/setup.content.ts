@@ -31,4 +31,5 @@ tt_content.stdWrap.innerWrap.cObject{
 	
 	130=< tt_content.stdWrap.innerWrap.cObject.default
 	130.20.10.value = frame_shadow_box
+	
 } 

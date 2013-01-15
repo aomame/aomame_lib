@@ -76,7 +76,7 @@ lib.store {
 				additionalParams = &type={$aomame.option.print.type_num}
 				additionalParams.insertData = 1
 			}
-			outerWrap = <div class="printlink">|</div>
+			outerWrap = <div class="printlink visible-desktop">|</div>
 		}
 	}
 	
