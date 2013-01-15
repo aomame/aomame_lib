@@ -34,7 +34,7 @@ lib.fancyheader {
 	10.wrap = <div class="{$aomame.page.settings.layout.container}"><div class="{$aomame.page.settings.layout.row}">|</div></div>
 	
 	
-	20 = HTML
+	20 = TEXT
 	20.value = <div class="fh_tab"><p>{$aomame.page.header.fancyheader.tab.content}</p></div>
 	
 	wrap = <section class="fancyheader_grid {$aomame.page.header.fancyheader.visibility}">|</section>

@@ -67,11 +67,17 @@ lib.body_tag {
 	}
 	
 	
-	30 = TEXT
-	30 {
+	default = TEXT
+	default {
 		insertData = 1
 		value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}">
 	}
+	
+	print = TEXT
+	print {
+		value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="javascript:window.print()">
+		insertData = 1
+	}
 }
 
-page.bodyTagCObject < lib.body_tag
+page.bodyTagCObject < lib.body_tag.default

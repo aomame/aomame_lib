@@ -1,0 +1,33 @@
+<div class="no_header">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <!-- Navigation collapse -->
+          <f:format.html>{nav_collapse}</f:format.html>
+          
+          
+          <!-- Logo -->
+          <f:format.html parseFuncTSPath="lib.parseFunc">{logo}</f:format.html>
+          
+          <!-- Firstlevel Navigation -->
+          <f:format.html parseFuncTSPath="lib.parseFunc">{nav_firstlevel}</f:format.html>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+    	
+	<!-- Content -->
+	<div class="row">
+		<div class="span10 col_middle">
+			<f:format.html parseFuncTSPath="lib.parseFunc">{content_middle}</f:format.html>
+		</div>
+	</div>
+	
+    </div> <!-- /container -->
+    
+    <!-- Footer -->
+    <f:format.html parseFuncTSPath="lib.parseFunc">{mobile_footer}</f:format.html>
+    <f:format.html parseFuncTSPath="lib.parseFunc">{footer}</f:format.html>
+</div>

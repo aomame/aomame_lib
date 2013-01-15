@@ -13,16 +13,13 @@
 #
 #---------------------------------------------------------------------
 
-lib.logo = COA
-lib.logo{
-	2 = IMAGE 
-	2 {
+#---------------------------------------------------------------------
+#
+#  Add and overwrite of the {global}setup.pagerenderer.ts
+#
+#---------------------------------------------------------------------
+
+lib.pagerenderer {
 	
-		file = {$aomame.path.local}img/{$aomame.page.header.logo.filename}
-		stdWrap.typolink{ 
-			parameter = {$aomame.page.header.homelink}
-			ATagParams = class="brand"
-		}
-		altText = {$aomame.page.header.logo.altText}
-	}
+	
 }

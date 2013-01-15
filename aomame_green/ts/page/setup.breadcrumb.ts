@@ -13,16 +13,37 @@
 #
 #---------------------------------------------------------------------
 
-lib.logo = COA
-lib.logo{
-	2 = IMAGE 
-	2 {
+#---------------------------------------------------------------------
+#
+#  Prime breadcrumb with searchform
+#
+#---------------------------------------------------------------------
+
+lib.breadcrumb {
 	
-		file = {$aomame.path.local}img/{$aomame.page.header.logo.filename}
-		stdWrap.typolink{ 
-			parameter = {$aomame.page.header.homelink}
-			ATagParams = class="brand"
+	20 < lib.store.divider
+	
+	30= COA
+	30 {
+		
+		10 = COA
+		10 {
+			
+			10 < lib.store.title
+			10.wrap = <h1>|</h1>
+		
+			20 < lib.breadcrumb.10
+			
+			wrap = <div class="span8">|</div>
 		}
-		altText = {$aomame.page.header.logo.altText}
+		
+		20 < lib.searchform
+		20.wrap = <div class="span4">|</div>
+		
+		wrap = <div class="row-fluid bc_bottom">|</div>
 	}
+	
+	40 < lib.store.divider
+	
 }
+lib.breadcrumb.10 >
