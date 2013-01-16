@@ -37,7 +37,7 @@ lib.store {
 	
 	
 	##  horicontal line : the same as the TYPO3 Content Element "Divider"
-	divider = HTML
+	divider = TEXT
 	divider.value = <div class="divider"><hr /></div>
 
 

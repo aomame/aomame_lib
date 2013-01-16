@@ -107,6 +107,11 @@ section.fancyheader_grid .container .afh.first div {
 	padding: 0;
 }
 
+section.fancyheader_grid .afh.last {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
 /*end*/
 
 
