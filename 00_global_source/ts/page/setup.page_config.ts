@@ -70,7 +70,7 @@ config {
 	
 	
 	#performance
-	compressJs = 1
+	compressJs = 0
 	inlineStyle2TempFile = 1
 	compressCss = 1
 	

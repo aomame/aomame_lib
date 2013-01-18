@@ -47,11 +47,8 @@ lib.body_tag {
 			7 = TEXT
 			7.value = no_header_with_nav
 		}
-	}
-	
-	#load current language to register: language
-	20 = LOAD_REGISTER
-	20 {
+		
+		#load current language to register: language
 		language.cObject = CASE
 		language.cObject {
 			key = {TSFE:sys_language_uid}
@@ -65,19 +62,14 @@ lib.body_tag {
 			3.value = {$aomame.ext.language.3.language}
 		}
 	}
-	
-	
-	default = TEXT
-	default {
+
+	20 = TEXT
+	20 {
 		insertData = 1
 		value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}">
 	}
 	
-	print = TEXT
-	print {
-		value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="javascript:window.print()">
-		insertData = 1
-	}
+	99 = RESTORE_REGISTER
 }
 
-page.bodyTagCObject < lib.body_tag.default
+page.bodyTagCObject < lib.body_tag

@@ -338,6 +338,35 @@ aomame {
 			email = support@aomame.ch
 		}
 		
+		#allowed buttons:
+		#  
+		social {
+			
+			includeJs {
+				google_plus = 1
+				facebook = 1
+				twitter	= 1
+			}
+			
+			1 {
+				active = 1
+				network = googleplus
+				button = google_plusone
+			}
+			
+			2 {
+				active = 1
+				network = facebook
+				button = facebook
+			}
+			
+			3 {
+				active = 1
+				network = twitter
+				button = twitter
+			}
+		}
+		
 		copyright {
 			active = 1
 			by = Aomame designs

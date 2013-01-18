@@ -160,6 +160,11 @@ section.fancyheader_grid .afh.last {
 }
 
 
+/* socialbuttons */
+.socialbuttons .social {
+	float: left;
+	margin-right: 10px;
+}
 
 /* Printlink */
 

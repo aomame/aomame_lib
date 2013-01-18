@@ -28,7 +28,6 @@ print.typeNum = {$aomame.option.print.type_num}
 print.config {
 	spamProtectEmailAddresses = 0
 	admPanel = 0
-	
 	index_enable = 0
 	index_externals = 0
 }
@@ -37,8 +36,9 @@ print.config {
 #---------------------------------------------------------------------
 #  Build Body Tag
 #---------------------------------------------------------------------
-print.bodyTagCObject < lib.body_tag.print
-
+lib.print_body_tag < lib.body_tag
+lib.print_body_tag.20.value = <body class="pid_{TSFE:id} lang_{register:language} layout_{register:be_layout}" bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="javascript:window.print()">
+print.bodyTagCObject < lib.print_body_tag
 
 
 #---------------------------------------------------------------------
@@ -55,9 +55,6 @@ print.10 {
 	30 {
 		typolink {
 			parameter < lib.store.uid
-			#additionalParams = &type=0
-			#additionalParams.insertData = 1
-			#returnLast = url
 		}
 		wrap = <div class="pih_data page_title">|</div>
 	}
@@ -93,7 +90,7 @@ print.50.value = <div class="linkcontainer"><div class="lc_header"><h1>Links</h1
 
 
 #---------------------------------------------------------------------
-#  Include CSS / JS Files 
+#  Include CSS / JS Files / Title Tag
 #---------------------------------------------------------------------
 print {	 
 	includeCSS {
@@ -107,6 +104,17 @@ print {
 	
 	includeJSFooter {
 		print = {$aomame.path.global}js/print/links.js
+	}
+
+	headerData {
+		10 = COA
+		10 {
+			10 < lib.store.website
+			20=TEXT
+			20.value = :&nbsp;
+			30 < lib.store.title
+			wrap = <title>|</title>
+		}
 	}
 }
 

@@ -106,6 +106,21 @@ page {
 	
 	fancybox_settings = {$aomame.path.local}js/lightbox.js
 	fancybox_settings.if.isTrue = {$aomame.ext.lightbox.active}
+	
+	google_plus = {$aomame.path.global}js/social/google_plus.js
+	google_plus.if{
+		isTrue = {$aomame.option.social.includeJs.google_plus}
+	}
+	
+	facebook_like = {$aomame.path.global}js/social/facebook_like.js
+	facebook_like.if{
+		isTrue = {$aomame.option.social.includeJs.facebook}
+	}
+	
+	twitter_button = {$aomame.path.global}js/social/twitter_button.js
+	twitter_button.if{
+		isTrue = {$aomame.option.social.includeJs.twitter}
+	}
   }
   
   

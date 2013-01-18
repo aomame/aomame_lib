@@ -45,10 +45,10 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.footer.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.fancyheader.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.navigation.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.print.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.body_tag.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.searchform.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.social.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.layout.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.body_tag.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.content.ts">
 
 
@@ -68,6 +68,6 @@
 # 
 # Print Layout
 #==================================
-[globalVar = TSFE:type = 400]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/packages/global/site/snowpack/layout2/preset/matchcondition/TSFE/type_98_setup.txt">
+[globalVar = TSFE:type = {$aomame.option.print.type_num}]
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.print.ts">
 [global]

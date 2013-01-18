@@ -35,6 +35,31 @@ lib.store {
 	website = TEXT
 	website.value = {$aomame.page.settings.site_name}
 	
+	## current URL
+	current_url = TEXT
+	current_url.data = getIndpEnv:TYPO3_REQUEST_URL
+	
+	## current language
+	current_lang = COA
+	current_lang {
+	
+		10 = CASE
+		10 {
+			key.data = TSFE:sys_language_uid
+			default = TEXT
+			default.value = {$aomame.ext.language.default.language}
+			1 = TEXT
+			1.value = {$aomame.ext.language.1.language}
+			2 = TEXT
+			2.value = {$aomame.ext.language.2.language}
+			3 = TEXT
+			3.value = {$aomame.ext.language.3.language}
+		}
+		
+		wrap = <body class="lang_|">
+		wrap.insertData = 1
+	}
+	
 	
 	##  horicontal line : the same as the TYPO3 Content Element "Divider"
 	divider = TEXT
@@ -72,6 +97,7 @@ lib.store {
 		file = {$aomame.path.global}img/icons/{$aomame.option.print.icon}
 		stdWrap {
 			typolink {
+				target = _blank
 				parameter < lib.store.uid
 				additionalParams = &type={$aomame.option.print.type_num}
 				additionalParams.insertData = 1
