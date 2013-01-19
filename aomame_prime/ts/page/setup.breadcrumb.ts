@@ -40,7 +40,7 @@ lib.breadcrumb {
 		20 < lib.searchform
 		20.wrap = <div class="span4">|</div>
 		
-		wrap = <div class="row-fluid bc_bottom">|</div>
+		wrap = <div class="{$aomame.page.settings.layout.row} bc_bottom">|</div>
 	}
 	
 	40 < lib.store.divider

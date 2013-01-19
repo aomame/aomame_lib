@@ -33,14 +33,23 @@ $("document").ready(function(){
 	
 	//add parameter to forms
 	action = $('.felogin form').attr('action');
-	$('.felogin form').attr('action', action+open_param)
+	$('.felogin form').attr('action', action+open_param);
+	
+	
+	$(window).load(function(){
+		$('.socialbuttons').delay(800).fadeIn(1000);
+			
+			//Facebook Like doesen't work in FireFox if it's initial call is on display: none;
+			//var like_box = $('.fb-like-inactive', '.socialbuttons');
+			//like_box.removeClass('fb-like-inactive');
+			//like_box.addClass("fb-like");
+			//FB.XFBML.parse();	
+			
+		
+	
+	});
 
 });
-
-
-
-
-
 
 
 

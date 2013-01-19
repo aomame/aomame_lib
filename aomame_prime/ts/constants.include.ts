@@ -20,6 +20,7 @@
 ## GLOBAL: ext/constants/
 #====================================
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/constants/constants.news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/constants/constants.login.ts">
 
 
 

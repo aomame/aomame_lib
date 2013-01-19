@@ -138,7 +138,5 @@ page {
 	
 	content = {$aomame.path.global}css/content/theme_{$aomame.page.settings.layout.style}.css
 	
-	footer = {$aomame.path.global}css/footer/theme_{$aomame.page.settings.layout.style}.css
-	footer.if.isTrue = {$aomame.page.footer.active}
   }
 }

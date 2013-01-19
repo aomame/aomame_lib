@@ -1,0 +1,11 @@
+{namespace n=Tx_News_ViewHelpers}
+<!--
+	=====================
+		Partials/List/HeaderList.html
+-->
+	<!-- teaser item -->
+	<li class="articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+		<n:link newsItem="{newsItem}" settings="{settings}">
+			{newsItem.title}
+		</n:link>
+	</li>

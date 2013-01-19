@@ -29,7 +29,7 @@
 							<f:then>
 								<ul class="news-teaser-list">
 									<f:for each="{news}" as="newsItem">
-										<f:render partial="List/FancyheaderList" arguments="{newsItem: newsItem, settings:settings}" />
+										<f:render partial="List/HeaderList" arguments="{newsItem: newsItem, settings:settings}" />
 									</f:for>
 								</ul>
 							</f:then>
@@ -39,9 +39,9 @@
 						<!-- Footer List -->
 						<f:if condition="{0:settings.templateLayout} == {0:'footer_list'}">
 							<f:then>
-								<ul class="news-teaser-list">
+								<ul class="news-menu-view">
 									<f:for each="{news}" as="newsItem">
-										<f:render partial="List/FancyheaderList" arguments="{newsItem: newsItem, settings:settings}" />
+										<f:render partial="List/HeaderList" arguments="{newsItem: newsItem, settings:settings}" />
 									</f:for>
 								</ul>
 							</f:then>

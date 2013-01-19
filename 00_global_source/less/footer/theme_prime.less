@@ -1,0 +1,118 @@
+
+//*********************************************
+//    Included Vars
+/**********************************************
+*
+*	//Spacing
+*	@footerPaddingTop:				 	 5px; 
+*	@footerPaddingBottom:				20px;
+*
+*
+*	//Borders
+*	@footerBoarderTop:	   5px solid #CFCFCF;
+*	@footerBoarderBottom: 				   0;
+*
+*
+*	//Text
+*	@footerColor:					 #A4A4A4;
+*	@footerFontSize:					14px;
+*
+*
+*	//Link
+*	@footerLinkColor: 			 @footerColor;
+*	@footerLinkColorHover:		      #DD4B39;
+*
+*	//Headers
+*	@footerHeaderColor: 			  #F0F0F0;
+*	@footerHeaderSize: 			  	     16px;
+*	@footerHeaderFontWeight:		 	  400;
+*	@footerHeaderBottomMargin:	   	  	 20px;
+*	@footerHeaderTextTransform: 	uppercase;
+*
+*
+*	//Lists
+*	@footerListBoarderBottom: 1px solid #434343;
+*	@footerListLinkMargin:				 15px 0;
+*
+*	//Subfooter Spacing
+*	@subfooterPadding: 20px 0;
+*
+*
+*************************************************/
+
+
+/**************/
+/* MAIN Footer*/
+
+.footer_grid {
+	padding-top: @footerPaddingTop;
+	padding-bottom: @footerPaddingBottom;
+}
+
+footer {
+	border-top: @footerBoarderTop;
+	border-bottom: @footerBoarderBottom;
+	color: @footerColor;
+    font-size: @footerFontSize;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6, {
+	color: @footerHeaderColor;
+    font-size: @footerHeaderSize;
+    font-weight: @footerHeaderFontWeight;
+    margin-bottom: @footerHeaderBottomMargin;
+    text-transform: @footerHeaderTextTransform;
+}
+
+footer ul,
+footer ol {
+    margin: 0;
+    padding: 0;
+}
+
+footer  li {
+	border-bottom: @footerListBoarderBottom;
+    list-style: none outside none;
+}
+
+footer li.last, 
+footer li:last-child {
+    border: medium none;
+}
+
+footer li.first a, 
+footer li:first-child a {
+    margin-top: 0;
+}
+
+footer li a {
+    display: block;
+    margin: @footerListLinkMargin;
+    color: @footerLinkColor;
+    &:hover {
+	    color: @footerLinkColorHover;
+	    text-decoration: none;	
+    }
+}
+
+footer .socialbuttons {
+	margin-top: -@footerHeaderBottomMargin;
+}
+
+/************/
+/* Sub-FOOTER*/
+
+
+.subfooter_grid {
+	padding: @subfooterPadding;
+}
+
+.subfooter_grid p {
+	margin: 0;
+}
+

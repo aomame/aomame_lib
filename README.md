@@ -41,6 +41,7 @@ Features:
 	- Pre-configured extensions
 	- Pre-configured Backenlayouts and Gridelements
 	- Flexible to integrate any TS and Plugins
+	- Social Media Buttons
 
 
 

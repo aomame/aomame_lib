@@ -60,7 +60,7 @@ lib.social {
 	twitter = COA
 	twitter{
 		10 = {$aomame.head.baseURL}
-		wrap = <a href="https://twitter.com/share" class="twitter-share-button" data-url="|" data-via="AomameDesigns" data-lang="de" data-count="none">Twittern</a>
+		wrap = <div class="social"><a href="https://twitter.com/share" class="twitter-share-button" data-url="|" data-via="AomameDesigns" data-lang="de" data-count="none">Twittern</a></div>
 	}
 	
 	

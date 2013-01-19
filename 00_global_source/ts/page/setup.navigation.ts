@@ -81,42 +81,34 @@ lib.nav_secondlevel {
 	
 	1 = TMENU
 	1 {
-	 	#expAll =1
+	 	expAll = {$aomame.page.nav.secondlevel.expand_all}
 	    wrap = <ul class="nav nav-list sidenav">|</ul>
 	    noBlur = 1
-	    expAll = 0
 	    target = _top
 	      
 		NO = 1
 		NO {
-			wrapItemAndSub = <li>|</li>
-		    stdWrap {
-		    	innerWrap = <i class="{$aomame.page.nav.secondlevel.icon.name}"></i>
-		    	innerWrap.if {
-		    		isTrue = {$aomame.page.nav.secondlevel.icon.active}
-		    	}
-		    	#htmlSpecialChars = 1
+			wrapItemAndSub.cObject = COA
+  			wrapItemAndSub.cObject {
+			    # Has only one menu item
+			    10 = TEXT
+			    10.value = <li class="single">|</li>
+			    10.if.value.data = register:count_menuItems
+			    10.if.equals = 1
+			 
+			    # Minimum two visible menu items
+			    20 = TEXT
+			    20.value = <li class="first">|</li> |*| <li>|</li> |*|<li class="last">|</li>
+			    20.if.value.data = register:count_menuItems
+			    20.if.equals = 1
+			    20.if.negate = 1
 		    }
-		    
-		    10 = COA
-		    10 {
-				10 = TEXT
-				10 {
-					field < lib.store.title
-					listNum = 0
-					listNum.splitChar = |
-				}
-			
-				20 < .10
-				20{
-					listNum = 1
-					wrap = <br />|
-					required = 1
-				}
-	    	}
-		    stdWrap.field >
-		    stdWrap.cOnject = COA
-		    stdWrap.cObject < .1
+		    stdWrap{
+		   		innerWrap = <i class="{$aomame.page.nav.secondlevel.icon.name}"></i>
+	    		innerWrap.if {
+	    			isTrue = {$aomame.page.nav.secondlevel.icon.active}
+	    		}
+		   	} 
 	    }
 	    
 	    CUR <.NO
@@ -404,24 +396,11 @@ lib.superfish_nav {
 		}
 	}
 	
+	2.CUR < .2.NO
 	2.CUR {
-		wrapItemAndSub.cObject = COA
-		wrapItemAndSub.cObject {
-			# Es ist nur ein Menupunkt vorhanden
-		    10 = TEXT
-		    10.value = <li class="current single">|</li>
-		    10.if.value.data = register:count_menuItems
-		    10.if.equals = 1
-		 
-		    # Es sind mindestens zwei Menupunkt vorhanden
-		    20 = TEXT
-		    20.value = <li class="current first"> | </li> |*| <li> | </li> |*| <li class="current last"> | </li>
-		    20.if.value.data = register:count_menuItems
-		    20.if.equals = 1
-		    20.if.negate = 1
-		}
+		wrapItemAndSub.cObject.10.value = <li class="current single">|</li>
+		wrapItemAndSub.cObject.20.value = <li class="current first"> | </li> |*| <li> | </li> |*| <li class="current last"> | </li>
 	}
-	
 	2.wrap = <ul class="sf_2 sf_sub">|</ul>
 	
 	3 < .2

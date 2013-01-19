@@ -70,9 +70,9 @@ config {
 	
 	
 	#performance
-	compressJs = 0
+	compressJs = 1
 	inlineStyle2TempFile = 1
-	compressCss = 1
+	compressCss = 0
 	
 	# do not render title tag to head
 	noPageTitle = 2

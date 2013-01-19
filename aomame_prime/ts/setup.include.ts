@@ -21,6 +21,7 @@
 #==================================
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/setup/setup.gridelement.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/setup/setup.news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/setup/setup.login.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/setup/setup.felogin.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/ext/setup/setup.datamints_feuser.ts">
 
@@ -70,4 +71,12 @@
 #==================================
 [globalVar = TSFE:type = {$aomame.option.print.type_num}]
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.print.ts">
+[global]
+
+
+# 
+# Sitemap Layout
+#==================================
+[globalVar = TSFE:type = 543]
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.sitemap.ts">
 [global]

@@ -103,6 +103,7 @@ aomame {
 			
 			secondlevel {
 				enrty_level = 1
+				expand_all = 0
 				visibility = visible-desktop
 				direction = 
 				icon {
@@ -337,6 +338,7 @@ aomame {
 			name = Aomame designs
 			email = support@aomame.ch
 		}
+		
 		
 		#allowed buttons:
 		#  

@@ -100,13 +100,31 @@
 	color: @navbarLinkColorCurrent;
 }
 
-
-.sidenav > li:first-child > a {
-    border-radius: @sidenavFirstLinkBorder;
+.sidenav > li.first > a {
+	border-radius: @sidenavFirstLinkBorder;
 }
 
-.sidenav > li:last-child > a {
-    border-radius: @sidenavLastLinkBorder;
+.sidenav > li.last > a {
+	border-radius: @sidenavLastLinkBorder;
+}
+
+.sidenav > li.single > a {
+	border-radius: @sidenavBorderRadius;
+}
+
+.sidenav > li.last > a.active,
+.sidenav > li.last > a.current {
+	border-radius: 0;
+}
+
+.sidenav > li.last ul li.single > a,
+.sidenav > li.last ul li.last > a {
+	border-radius: @sidenavLastLinkBorder;
+}
+
+.sidenav > li.last ul li.single a.active,
+.sidenav > li.last ul li.last a.active {
+	border-radius: 0;
 }
 
 .sidenav > .current > a {
@@ -196,7 +214,7 @@
 }
 
 
-// *** level 3 *** //
+// *** level 4 *** //
 
 .sidenav > li > ul > li > ul > li > ul {
 	background-color: darken(@sidenavBackgroundColor, 8%);

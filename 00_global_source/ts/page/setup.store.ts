@@ -27,22 +27,25 @@ lib.store {
 	uid = TEXT
 	uid.field = uid
 	
+	
 	##  Alternative Title of the current page - if not available the normal pagetitle is taken
 	title = TEXT
 	title.field = nav_title // title
+	
 	
 	##  Website Name
 	website = TEXT
 	website.value = {$aomame.page.settings.site_name}
 	
+	
 	## current URL
 	current_url = TEXT
 	current_url.data = getIndpEnv:TYPO3_REQUEST_URL
 	
+	
 	## current language
 	current_lang = COA
 	current_lang {
-	
 		10 = CASE
 		10 {
 			key.data = TSFE:sys_language_uid
@@ -55,9 +58,6 @@ lib.store {
 			3 = TEXT
 			3.value = {$aomame.ext.language.3.language}
 		}
-		
-		wrap = <body class="lang_|">
-		wrap.insertData = 1
 	}
 	
 	
@@ -87,7 +87,6 @@ lib.store {
 	## Cleardiv
 	clear = TEXT
 	clear.value = <div class="clear"></div>
-	
 	
 	
 	## Printlink
