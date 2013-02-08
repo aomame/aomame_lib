@@ -5,5 +5,5 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 
-#ignor local projects
-#aomame/*
+#aomame green is currently just a testing workspace
+aomame_green/*
