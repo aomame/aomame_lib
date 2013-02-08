@@ -24,9 +24,12 @@ lib.store = COA
 lib.store {
 
 	##  uid of the current page
+	# !! deprecated -> use lib.store.current_pid
 	uid = TEXT
 	uid.field = uid
 	
+	current_pid = TEXT
+	current_pid.field = uid
 	
 	##  Alternative Title of the current page - if not available the normal pagetitle is taken
 	title = TEXT

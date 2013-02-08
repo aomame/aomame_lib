@@ -14,20 +14,21 @@
 #---------------------------------------------------------------------
 
 
-lib.searchform = COA_INT
+#---------------------------------------------------------------------
+#  
+#  Searchform with the bootstrap typehead. source array needs to be setted
+#  in JavaScript.
+#  
+#---------------------------------------------------------------------
+
+lib.searchform = COA
 lib.searchform {
-  
   10 = TEXT
   10.typolink.parameter = {$aomame.ext.search.pid}
   10.typolink.returnLast = url
-  10.wrap = <form action="|" method="get" class="pull-right" name="aomame_searchbox">
-    
-  20 = COA
-  20 {
-    10 = TEXT
-    10.value =  <input type="hidden" name="id" value="{$aomame.ext.search.pid}" />
-    20 = TEXT
-    20.value = <input type="text" class="search-query" placeholder="Search" name="tx_kesearch_pi1[sword]" /></form>
-    
-  }
+  10.wrap (
+  	<form action="|" method="get" class="pull-right" name="aomame_searchbox">
+  		<input type="text" class="search-query" data-provide="typeahead" placeholder="Search" name="tx_kesearch_pi1[sword]" />
+  	</form>
+  )
 }

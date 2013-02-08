@@ -108,16 +108,6 @@ page.2 {
 	pid < plugin.tx_dixeasylogin_pi1.pid_loginPage
 }
 
-[globalVar = LIT:1 = {$plugin.tx_dixeasylogin_pi1.include_jQuery}]
-	#page.includeJSlibs.jQuery = https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js
-	#page.includeJSlibs.jQuery.external = 1
-	
-	page.includeJSlibs.jQueryUI = http://code.jquery.com/ui/1.9.2/jquery-ui.js
-	page.includeJSlibs.jQueryUI.external = 1
-
-	page.includeCSS.jQueryUI = http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css
-	page.includeCSS.jQueryUI.external = 1
-[global]
 [globalVar = LIT:1 = {$plugin.tx_dixeasylogin_pi1.disable.felogin}]
 	plugin.tx_dixeasylogin_pi1.provider.5 >
 [global]

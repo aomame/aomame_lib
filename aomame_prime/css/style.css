@@ -29,9 +29,10 @@ body > .container {
     margin: 25px 0 50px;
 }
 
-h4 {
+h1,h4 {
 	text-transform: uppercase;
 	font-weight: normal !important;
+	font-size: 17.5px !important;
 }
 
 .four_column_grid {
@@ -39,45 +40,6 @@ h4 {
 }
 
 
-/* Responsive */
-/**************/
-@media (max-width: 767px) {
-	
-	.navbar .container {
-    	width: 100% !important;
-	}
-	
-	.content {
-		padding: 0 20px;
-	}
-	
-	footer section {
-		padding: 5px 20px 5px;
-	}
-	
-	section.fancyheader_grid .container .afh {
-		padding: 20px !important;
-	}
-	section.fancyheader_grid .container .afh.first {
-		padding: 0 !important;
-		display: block !important;
-	}
-	
-	section.fancyheader_grid .container .row-fluid .span2 {
-		width: 100% !important;
-	}
-}
-
-@media (max-width: 1199px) {
-	section.fancyheader_grid .container .afh.first {
-		display: none;
-	}
-	
-	section.fancyheader_grid .container .row-fluid .span2 {
-		width: 22%;
-	}
-	
-}
 
 /* Fancyheader */
 /***************/
@@ -94,10 +56,14 @@ section.fancyheader_grid .container .afh {
 	font-size: 12px;
 	color: #EEEEEE;
 	border-right: 1px solid #EEEEEE;
-	padding: 20px 15px 20px 0;
+	padding: 0px 15px 20px 0;
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+section.fancyheader_grid .container .afh.last {
+	padding-right: 0px;
+}
+
 section.fancyheader_grid .container .afh.last,
 section.fancyheader_grid .container .afh.first {
 	border-right: none;
@@ -113,6 +79,7 @@ section.fancyheader_grid .afh.last {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
+
 
 /*end*/
 
@@ -198,4 +165,293 @@ section.fancyheader_grid .afh.last {
 .printlink img {
     height: auto;
     width: 25px;
+}
+
+
+
+
+/*  Login in Content */
+/*********************/
+.tx-dixeasylogin-pi1 .felogin {
+	display: none;
+}
+
+
+.content_grid .ao_login {
+	width: 380px;
+}
+
+.ao_login input {
+	width: 280px;
+}
+
+.ligin_item {
+	margin-bottom: 25px;
+}
+
+.ligin_item form {
+	margin: 0;
+}
+
+.login_field input.Google {
+	width: 282px;
+	height: 45px;
+}
+
+.login_field input.facebook {
+	background-image: url('../img/btn/fb_connect.png');
+	width: 282px;
+	background-repeat: no-repeat;
+	height: 50px;
+	border: 0;
+	background-color: transparent;
+	color: transparent;
+}
+
+.login_field input.facebook:hover {
+	background-image: url("../img/btn/fb_connect_hover.png");
+}
+
+.login_field button.felogin_tab {
+	width: 282px;
+	height: 45px;
+	font-size: 18px;
+}
+
+.ao_login_pwforgot #tx_felogin_pi1-forgot-email {
+	margin-top: 15px;
+}
+
+.content_grid .ao_profile_setting {
+	display: none;
+}
+
+
+/* login alerts */
+.ao_alert_hidden {
+	display: none;
+}
+
+
+/* login in fancyheader  */
+/*************************/
+section.fancyheader_grid button.felogin_tab {
+	width: 170px;
+	height: 40px;
+	font-size: 16px;
+}
+
+section.fancyheader_grid .login_field input.facebook {
+	width: 170px;
+	height: 40px;
+	background-image: url('../img/btn/fb_connect_fh.png');
+}
+
+section.fancyheader_grid .login_field input.Google {
+	width: 170px;
+	height: 40px;
+	background-image: url('../img/btn/google.png');
+	background-repeat: no-repeat;
+	color: transparent;
+	background-color: transparent;
+    border: 0 none;
+}
+
+section.fancyheader_grid .login_field .felogin_tab {
+	width: 170px;
+	height: 40px;
+	background-image: url('../img/btn/aomame_login.png');
+	background-repeat: no-repeat;
+	color: transparent;
+	background-color: transparent;
+    border: 0 none;
+}
+
+section.fancyheader_grid .felogin input.user,
+section.fancyheader_grid .felogin input.pass {
+	width: 155px;
+}
+
+section.fancyheader_grid .felogin .signup {
+	text-align: center;
+	font-size: 14px;
+	vertical-align: middle;
+	margin: 5px;
+	line-height: 20px;
+}
+
+
+section.fancyheader_grid .felogin .permalogin_input {
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+
+section.fancyheader_grid .felogin .permalogin_label {
+	padding-top: 2px;
+}
+
+section.fancyheader_grid .felogin form,
+section.fancyheader_grid .felogin .forgotpass {
+	margin-bottom: 15px;
+}
+
+.content_grid .felogin .ao_userimage,
+.content_grid .felogin .ao_userimage img,
+section.fancyheader_grid .felogin .ao_userimage,
+section.fancyheader_grid .felogin .ao_userimage img {
+	width: 170px;
+	height: 150px;
+}
+
+.content_grid .felogin .ao_userimage,
+section.fancyheader_grid .felogin .ao_userimage {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+
+.content_grid .felogin .ao_username,
+section.fancyheader_grid .felogin .ao_username{
+	position: absolute;
+	bottom: 0;
+	height: 25px;
+	background-color:rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+.content_grid .felogin .ao_userimage .ao_username p,
+section.fancyheader_grid .felogin .ao_userimage .ao_username p {
+	margin: 0;
+	padding: 3px 10px 0;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+
+section.fancyheader_grid .felogin .ao_profile_setting {
+	position: absolute;
+	top: 0;
+	height: 35px;
+	background-color:rgba(0,0,0,0.5);
+	width: 100%;
+	display: none;
+}
+section.fancyheader_grid .felogin .ao_profile_setting p {
+	margin: 0;
+	padding: 7px 10px 0;
+	font-weight: bold;
+}
+
+section.fancyheader_grid .felogin .ao_profile_setting p a {
+	color: #ffffff;
+}
+section.fancyheader_grid .felogin .ao_profile_setting p a:hover {
+	color: #999999;
+}
+
+
+
+/* Responsive */
+/**************/
+
+@media (max-width: 1199px) {
+	section.fancyheader_grid .container .afh.first {
+		display: none !important;
+	}
+	
+	section.fancyheader_grid .container .row-fluid .span2 {
+		width: 24.4% !important;
+	}
+	section.fancyheader_grid .container .row-fluid .span2.last {
+		width: 18% !important;
+	}
+	
+}
+
+@media (max-width: 979px) {
+	section.fancyheader_grid .fh_tab {
+		right: 40% !important;
+	}
+	section.fancyheader_grid .container .row-fluid .span2 {
+		width: 22% !important;
+	}
+	section.fancyheader_grid .container .row-fluid .span2.last {
+		width: 22% !important;
+	}
+	.navbar .btn-navbar {
+		margin-top: 30px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	.navbar .container {
+    	width: 100% !important;
+	}
+	
+	.content {
+		padding: 0 20px;
+	}
+	
+	footer section {
+		padding: 5px 20px 5px;
+	}
+	
+	section.fancyheader_grid .container .afh {
+		padding: 20px !important;
+	}
+	
+	section.fancyheader_grid .container .afh.first {
+		padding: 0 !important;
+		display: block !important;
+	}
+	
+	section.fancyheader_grid .container .row-fluid .span2 {
+		width: 100% !important;
+	}
+
+	.breadcrumb {
+		text-align: center;
+	}
+	.breadcrumb * {
+		float: none !important;
+	}
+	.breadcrumb form {
+		padding-left: 20px;
+	}
+	
+	section.fancyheader_grid .fh_tab {
+		right: 37% !important;
+	}
+}
+
+@media (max-width: 579px) {
+	section.fancyheader_grid .fh_tab {
+		right: 35% !important;
+	}
+}
+@media (max-width: 459px) {
+	section.fancyheader_grid .fh_tab {
+		right: 32% !important;
+	}
+}
+
+@media (max-width: 389px) {
+	.navbar .btn-navbar {
+		margin-top: 0px !important;
+		position: relative;
+		right: 41%;
+	}
+	
+	section.fancyheader_grid .fh_tab {
+		right: 29% !important;
+	}
+}
+@media (max-width: 329px) {
+	section.fancyheader_grid .fh_tab {
+		right: 22% !important;
+	}
+	.navbar .btn-navbar {
+		right: 37%;
+	}
 }

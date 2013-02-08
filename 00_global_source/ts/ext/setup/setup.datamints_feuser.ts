@@ -32,7 +32,13 @@ plugin.tx_datamintsfeuser_pi1 {
 	}
 
 	thumb {
-		file.maxW = 100
+		file.maxW = 315
 	}
+	
+	copyfields {
+	    email {
+	    	username = 1
+	    }
+  	}
 
 }

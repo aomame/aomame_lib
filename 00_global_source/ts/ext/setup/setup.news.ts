@@ -40,6 +40,8 @@ plugin.tx_news {
 		templateRootPath = {$aomame.path.global}ext/news/templates/
 		partialRootPath = {$aomame.path.global}ext/news/partials/
 		layoutRootPath = {$aomame.path.global}ext/news/layouts/
+		
+		widget.Tx_News_ViewHelpers_Widget_PaginateViewHelper.templateRootPath = {$aomame.path.global}ext/news/templates/
 	}
 	# Modify the translation
 	_LOCAL_LANG {
@@ -52,6 +54,9 @@ plugin.tx_news {
 	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
 	# ====================================
 	settings {
+		
+		startingpoint = {$aomame.ext.news.storage.pid}
+		
 		cssFile = {$aomame.path.global}css/news/news-basic.css
 
 		#Displays a dummy image if the news have no media items
@@ -68,7 +73,7 @@ plugin.tx_news {
 		}
 
 		includeSubCategories = 0
-
+		
 		analytics {
 			social {
 				facebookLike = 1
@@ -79,7 +84,7 @@ plugin.tx_news {
 
 		detailPidDetermination = flexform, categories, default
 
-		defaultDetailPid = {$aomame.ext.news.default_detail_view_pid}
+		defaultDetailPid = {$aomame.ext.news.view.detail.pid}
 		dateField = datetime
 
 		link {
@@ -101,6 +106,7 @@ plugin.tx_news {
 
 		facebookLocale = en_US
 		googlePlusLocale = en
+		disqusLocale = en
 
 		# Interface implementations
 		interfaces {
@@ -127,7 +133,8 @@ plugin.tx_news {
 			media {
 				image {
 					# choose the rel tag like gallery[fo]
-					lightbox = lightbox[myImageSet]
+					lightbox = fancybox123
+					additionalClass = lightbox
 					maxWidth = 282
 				}
 
@@ -145,21 +152,22 @@ plugin.tx_news {
 			# media configuration
 			media {
 				image {
-					maxWidth = 100
-					maxHeight = 100
+					maxWidth = 200
+					maxHeight = 200
 				}
 			}
 
 			# Paginate configuration.
 			paginate {
 				itemsPerPage = 10
-				insertAbove = TRUE
+				insertAbove = FALSE
 				insertBelow = TRUE
 				lessPages = TRUE
 				forcedNumberOfLinks = 5
-				pagesBefore = 3
-				pagesAfter = 3
+				pagesBefore = 2
+				pagesAfter = 2
 				templatePath =
+				prevNextHeaderTags = 1
 			}
 
 			rss {

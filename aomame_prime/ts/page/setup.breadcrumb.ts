@@ -21,10 +21,10 @@
 
 lib.breadcrumb {
 	
-	20 < lib.store.divider
+	30 < lib.store.divider
 	
-	30= COA
-	30 {
+	40= COA
+	40 {
 		
 		10 = COA
 		10 {
@@ -33,6 +33,8 @@ lib.breadcrumb {
 			10.wrap = <h1>|</h1>
 		
 			20 < lib.breadcrumb.10
+			
+			30 < lib.breadcrumb.20
 			
 			wrap = <div class="span8">|</div>
 		}
@@ -43,7 +45,8 @@ lib.breadcrumb {
 		wrap = <div class="{$aomame.page.settings.layout.row} bc_bottom">|</div>
 	}
 	
-	40 < lib.store.divider
+	50 < lib.store.divider
 	
 }
 lib.breadcrumb.10 >
+lib.breadcrumb.20 >

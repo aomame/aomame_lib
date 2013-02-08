@@ -1,13 +1,26 @@
+
 plugin.tx_felogin_pi1 {
-	templateFile = {$aomame.path.global}ext/fe_login/template.html
+	templateFile = {$aomame.path.global}ext/felogin/template.html
+	showPermaLogin = 1	
 	feloginBaseURL = {$aomame.head.baseURL}
+	showForgotPasswordLink = 1
 	
-	# So kann man den Willkommens Header komplett löschen (auch ohne Template)
-    #welcomeHeader_stdWrap.cObject = TEXT
-    #welcomeHeader_stdWrap.cObject.value =
-    #welcomeHeader_stdWrap.wrap = |
-    #Fehlermeldung wrappen
-    #errorHeader_stdWrap.wrap = <div class="error">|</div>
-    #Pfad zum Login-Box Template angeben
-    #templateFile = fileadmin/templates/ext_template/fe_login/login.html 
+	#this are own markers. will not work if felogin extension is updated
+	showSignUpLink = 1
+	signup_pid = {$aomame.ext.user.profile.pid}
+	profile_settings_pid = {$aomame.ext.user.profile.pid}
+	forget_passwort_pid = {$aomame.ext.user.profile.pid}
+	
+	profile {
+		img {
+			default {
+				path = typo3conf/ext/aomame_lib/aomame_prime/img/
+				file = profile.jpg
+				
+				#read image file from fe_users db field
+				db_field = tx_userimage_file
+			}
+		}
+	}
+	
 }

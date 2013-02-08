@@ -49,11 +49,26 @@ page {
 		jquery_color = {$aomame.path.global}js/lib/jquery.color.js
   		superfish = {$aomame.path.global}plugin/superfish/js/superfish.js
 		fancyheader = {$aomame.path.global}js/header/fancyheader.js
+		jcrop = {$aomame.path.global}js/plugin/jcrop/jquery.jcrop.js
+		jcrop.if{
+			value < lib.store.current_pid
+			equals = {$aomame.ext.user.profile.pid}
+		}
+		jcrop_settings = {$aomame.path.local}js/jcrop.js
+		jcrop_settings.if{
+			value < lib.store.current_pid
+			equals = {$aomame.ext.user.profile.pid}
+		}
 		script = {$aomame.path.local}js/script.js
 	}
   
 	includeCSS {
 		prime_style = {$aomame.path.local}css/style.css
 		fancyheader = {$aomame.path.global}css/header/fancyheader.css
+		jcrop = {$aomame.path.global}js/plugin/jcrop/jquery.jcrop.css
+		jcrop.if{
+			value < lib.store.current_pid
+			equals = {$aomame.ext.user.profile.pid}
+		}
 	}
 }

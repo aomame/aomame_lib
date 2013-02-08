@@ -127,9 +127,10 @@ aomame {
 			breadcrumb {
 				active = 1
 				#custom size: set in local breadcrumb.ts - misuse this field
-				size = breadcrumb_inner
+				size = 
 				entryLevel = 0
 				hide_on_rootpage = 1
+				exclude_uid_list = 
 			}
 		}
 		
@@ -282,18 +283,20 @@ aomame {
 			
 		# sr_feuser_register
 		user {
-			pid = 59
-			confirmed_user_group = 1
-			unconfirmed_user_group = 2
-			
+			storage.pid = 59
+			profile.pid = 61
+			user_group_id = 1
 		}
 			
 		# NEWS
 		news {
-			news_sysfolder_pid = 43
-			default_single_view_pid = 34
-			default_detail_view_pid = 65
-			
+			storage {
+				pid = 43
+			}
+			view {
+				detail.pid = 34
+				list.pid = 65
+			}
 			social {
 				show_share_buttons = 0
 			}
@@ -345,25 +348,25 @@ aomame {
 		social {
 			
 			includeJs {
-				google_plus = 1
-				facebook = 1
-				twitter	= 1
+				google_plus = 0
+				facebook = 0
+				twitter	= 0
 			}
 			
 			1 {
-				active = 1
+				active = 0
 				network = googleplus
 				button = google_plusone
 			}
 			
 			2 {
-				active = 1
+				active = 0
 				network = facebook
 				button = facebook
 			}
 			
 			3 {
-				active = 1
+				active = 0
 				network = twitter
 				button = twitter
 			}

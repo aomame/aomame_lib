@@ -2,6 +2,7 @@
 /* default styles for news extension */
 /**************************************/
 
+
 /* global styles */
 .news {
 	font-size: 14px;
@@ -76,31 +77,14 @@
 }
 
 .news .article .news-img-wrap {
-	float: left;
-	margin: 3px 12px 5px 0;
-	background: #fff;
-
+	margin: 3px 20px 5px 0;
 }
 
-.news .article .news-img-wrap a {
-	display: block;
-	float: left;
-	padding: 4px;
-	border: 1px solid #ddd;
-	background: #fff;
-}
-
-.news .article .news-img-wrap img {
-	float: left;
-	width: 100% !important;
-	height: auto;
-}
 
 .news .article h3 {
 	font-size: 16px;
 	margin: 0;
 	line-height: 28px;
-	font-style: italic;
 }
 
 .news .article .teaser-text {
@@ -229,7 +213,6 @@
 }
 
 .news-related {
-	width: 50%;
 	padding: 15px;
 	border: 1px solid #eee;
 	display: table-cell;
@@ -298,4 +281,51 @@
 .news .no-news-found {
 	color: #DB0202;
 	font-style: italic;
+}
+
+
+
+/*  Custom  */
+/************/
+.news-home-teaser .news-teaser-top {
+    height: 125px;
+}
+
+.news-home-teaser .news-teaser-top .teaser-text {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+	height: 100px;
+}
+
+.news-head {
+	margin-bottom: 30px;
+}
+
+.news .page-navigation {
+	text-align: center;
+}
+
+.news-list-view .article .news-related {
+	border: 0;
+	border-top: 1px solid #eee;
+	display: block;
+	padding: 10px 0;
+}
+
+.news-list-view .article .news-related h3 {
+	font-size: 12px;
+	line-height: 20px;
+}
+.news-list-view .article .news-related ul {
+	margin: 0;
+}
+.news-list-view .article .news-related li {
+	list-style: none;
+}
+
+.news-home-teaser .news-img-wrap {
+	float: left;
+	width: 150px;
+	height: auto;
 }

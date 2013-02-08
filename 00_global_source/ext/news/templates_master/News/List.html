@@ -1,0 +1,79 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General" />
+
+<f:section name="content">
+	<f:if condition="{news}">
+		<f:then>
+			
+			
+			<div class="news-list-view">
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						
+						
+						<!-- Home list view -->
+						<f:if condition="{0:settings.templateLayout} == {0:'home_teaser'}">
+							<f:then>
+								<div class="news-home-teaser">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/HomeTeaser" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+									<div class="clear"></div>
+								</div>
+							</f:then>
+						</f:if>
+						
+						
+						<!-- Fancyheader Listview -->
+						<f:if condition="{0:settings.templateLayout} == {0:'fancyheader'}">
+							<f:then>
+								<ul class="news-teaser-list">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/HeaderList" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+								</ul>
+							</f:then>
+						</f:if>
+						
+						
+						<!-- Footer List -->
+						<f:if condition="{0:settings.templateLayout} == {0:'footer_list'}">
+							<f:then>
+								<ul class="news-menu-view">
+									<f:for each="{news}" as="newsItem">
+										<f:render partial="List/HeaderList" arguments="{newsItem: newsItem, settings:settings}" />
+									</f:for>
+								</ul>
+							</f:then>
+						</f:if>
+						
+						
+						<!-- default -->
+						<f:if condition="{0:settings.templateLayout} == {0:'default'}">
+							<f:then>
+								<f:for each="{news}" as="newsItem">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings}" />
+								</f:for>
+							</f:then>
+						</f:if>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}">
+							<f:for each="{paginatedNews}" as="newsItem">
+								<f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+					
+				</f:if>
+			</div>
+			
+			
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+</f:section>

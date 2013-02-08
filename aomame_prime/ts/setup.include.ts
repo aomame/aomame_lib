@@ -38,7 +38,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.lightbox.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.language.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.language_nav.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.page_config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.configuration.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.logo.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.header.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.theme_menu.ts">
@@ -77,6 +77,6 @@
 # 
 # Sitemap Layout
 #==================================
-[globalVar = TSFE:type = 543]
+[globalVar = TSFE:type = 800]
 <INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/aomame_lib/00_global_source/ts/page/setup.sitemap.ts">
 [global]
